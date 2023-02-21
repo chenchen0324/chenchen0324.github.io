@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>CHEN&#39;s Blog</title>
   
-  
+  <subtitle>南无阿弥托福</subtitle>
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://chenchen0324.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>CHEN CHEN</name>
     
   </author>
   
@@ -29,6 +29,27 @@
         
         
     <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>你好世界</title>
+    <link href="https://chenchen0324.github.io/2022/10/04/ni-hao-shi-jie/"/>
+    <id>https://chenchen0324.github.io/2022/10/04/ni-hao-shi-jie/</id>
+    <published>2022-10-04T14:18:02.571Z</published>
+    <updated>2023-02-21T13:04:27.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;!&lt;br&gt;&lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;😄&lt;/span&gt;&lt;img</summary>
         
       
     
