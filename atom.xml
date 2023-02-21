@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2022-10-04T14:18:02.571Z</updated>
+  <updated>2023-02-21T14:27:26.212Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -17,23 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://chenchen0324.github.io/2022/10/04/hello-world/"/>
-    <id>https://chenchen0324.github.io/2022/10/04/hello-world/</id>
-    <published>2022-10-04T14:18:02.571Z</published>
-    <updated>2022-10-04T14:18:02.571Z</updated>
+    <title>How to build your website - Hexo and Github Page</title>
+    <link href="https://chenchen0324.github.io/2023/02/22/how-to-build-your-website-hexo-github-page/"/>
+    <id>https://chenchen0324.github.io/2023/02/22/how-to-build-your-website-hexo-github-page/</id>
+    <published>2023-02-22T00:25:00.000Z</published>
+    <updated>2023-02-21T14:27:26.212Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;How-to-build-your-website-Hexo-Github-Page&quot;&gt;&lt;a href=&quot;#How-to-build-your-website-Hexo-Github-Page&quot; class=&quot;headerlink&quot; title=&quot;How to</summary>
         
       
     
     
     
+    <category term="Website" scheme="https://chenchen0324.github.io/categories/Website/"/>
+    
+    
+    <category term="Hexo" scheme="https://chenchen0324.github.io/tags/Hexo/"/>
+    
+    <category term="Github" scheme="https://chenchen0324.github.io/tags/Github/"/>
     
   </entry>
   
@@ -50,6 +56,27 @@
         
         
     <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;!&lt;br&gt;&lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;😄&lt;/span&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://chenchen0324.github.io/2022/10/04/hello-world/"/>
+    <id>https://chenchen0324.github.io/2022/10/04/hello-world/</id>
+    <published>2022-10-04T14:18:02.571Z</published>
+    <updated>2022-10-04T14:18:02.571Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
         
       
     
