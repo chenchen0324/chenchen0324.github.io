@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-02-23T23:36:58.000Z</updated>
+  <updated>2023-02-24T09:40:50.941Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>How to build your website - Hexo+Github Page</title>
     <link href="https://chenchen0324.github.io/2023/02/24/how-to-build-your-website-hexo-github-page/"/>
     <id>https://chenchen0324.github.io/2023/02/24/how-to-build-your-website-hexo-github-page/</id>
-    <published>2023-02-23T23:36:58.000Z</published>
-    <updated>2023-02-23T23:36:58.000Z</updated>
+    <published>2023-02-24T00:25:00.000Z</published>
+    <updated>2023-02-24T09:40:50.941Z</updated>
     
     
       
@@ -34,6 +34,12 @@
     
     
     
+    <category term="Website" scheme="https://chenchen0324.github.io/categories/Website/"/>
+    
+    
+    <category term="Hexo" scheme="https://chenchen0324.github.io/tags/Hexo/"/>
+    
+    <category term="Github" scheme="https://chenchen0324.github.io/tags/Github/"/>
     
   </entry>
   

@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title></title>
+      <title>How to build your website - Hexo+Github Page</title>
       <link href="/2023/02/24/how-to-build-your-website-hexo-github-page/"/>
       <url>/2023/02/24/how-to-build-your-website-hexo-github-page/</url>
       
         <content type="html"><![CDATA[<h1 id="How-to-build-your-website-Hexo-Github-Page"><a href="#How-to-build-your-website-Hexo-Github-Page" class="headerlink" title="How to build your website: Hexo+Github Page"></a>How to build your website: Hexo+Github Page</h1><ul><li>Environment<ol><li>Install Git</li><li>Install Node.js</li><li><code>$ npm install -g hexo-cli</code></li></ol></li><li>Get Started<ol><li><code>$ hexo init {{folder}}</code></li><li><code>$ hexo server</code></li></ol></li><li>Theme<ol><li><code>$ git clone [https://github.com/blinkfox/hexo-theme-matery.git](https://github.com/blinkfox/hexo-theme-matery.git)</code></li><li>Copy the&nbsp;<code>hexo-theme-matery</code> folder to your&nbsp;<code>themes</code>folder of your Hexo blog project.</li><li>Modify the&nbsp;<code>_config.yml</code>of Hexo’s root folder → <code>theme: hexo-theme-matery</code></li><li><code>$ hexo server -p 4001</code></li></ol></li><li>Deploy<ol><li>Create a public repository in GitHub which name is +”.github.io”</li><li>Update <code>_config.yml</code> <pre class="line-numbers language-python" data-language="python"><code class="language-python">deploy<span class="token punctuation">:</span>  <span class="token builtin">type</span><span class="token punctuation">:</span> git  repo<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>SSH of your repository<span class="token punctuation">}</span><span class="token punctuation">}</span>  branch<span class="token punctuation">:</span> main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li><code>$ hexo generate</code></li><li><code>$ hexo deploy</code></li></ol></li><li>SSH connect issue  <img src="https://s3.bmp.ovh/imgs/2023/02/17/75b69c4c97402fc4.png" alt="https://s3.bmp.ovh/imgs/2023/02/17/75b69c4c97402fc4.png"></li><li>Customize your website<ol><li>create page for each tab</li><li>Also, create a new&nbsp;<code>_data</code>directory in your blog’s&nbsp;<code>source</code>directory and a new&nbsp;<code>friends.json</code>file in the&nbsp;<code>_data</code>directory. The contents of the file is as follows:</li><li>Configure the name of the basic menu navigation, path url and icon icon.</li><li>Secondary menu configuration method (optional)</li><li>check Search function</li><li>Translate Chinese Link to Pinyin</li><li>Post word count statistics plugin (Recommended)</li><li>Add emoji support (Optional)</li><li>Modify website footer</li><li>Modify social links</li><li>Post Front-matter</li><li>Go through config.yml</li></ol></li></ul>]]></content>
       
       
+      <categories>
+          
+          <category> Website </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Github </tag>
+            
+        </tags>
       
     </entry>
     
