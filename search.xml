@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>EC Website Chapter1_Env prepare</title>
+      <link href="/2023/03/05/ec-website-chapter1-env-prepare/"/>
+      <url>/2023/03/05/ec-website-chapter1-env-prepare/</url>
+      
+        <content type="html"><![CDATA[<h1 id="EC-Website-Chapter1-Env-prepare"><a href="#EC-Website-Chapter1-Env-prepare" class="headerlink" title="EC Website Chapter1_Env prepare"></a>EC Website Chapter1_Env prepare</h1><ol><li>Install atom, Git</li><li>Install virtual env</li></ol><pre class="line-numbers language-python" data-language="python"><code class="language-python">python3 <span class="token operator">-</span>m pip install <span class="token operator">-</span><span class="token operator">-</span>user virtualenv<span class="token comment"># create a new</span>python3 <span class="token operator">-</span>m venv <span class="token punctuation">{</span><span class="token punctuation">{</span>ecom<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token comment"># enter into virtual env</span>source <span class="token punctuation">{</span><span class="token punctuation">{</span>ecom<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>activate<span class="token comment"># check all packages</span>pip freeze<span class="token comment"># deactiavte virtual env</span>deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ol><li>install Django</li></ol><pre class="line-numbers language-python" data-language="python"><code class="language-python">pip install django<span class="token operator">==</span><span class="token number">3.1</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol><li>start project</li></ol><pre class="line-numbers language-python" data-language="python"><code class="language-python">djangp<span class="token operator">-</span>admin startproject <span class="token punctuation">{</span><span class="token punctuation">{</span>ec<span class="token punctuation">}</span><span class="token punctuation">}</span>cd <span class="token punctuation">{</span><span class="token punctuation">{</span>ec<span class="token punctuation">}</span><span class="token punctuation">}</span>python manage<span class="token punctuation">.</span>py runserver<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Django </tag>
+            
+            <tag> EC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>How to build your website - Hexo+Github Page</title>
       <link href="/2023/02/24/how-to-build-your-website-hexo-github-page/"/>
       <url>/2023/02/24/how-to-build-your-website-hexo-github-page/</url>

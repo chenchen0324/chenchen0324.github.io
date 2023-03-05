@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-02-24T09:40:50.941Z</updated>
+  <updated>2023-03-05T07:30:05.010Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EC Website Chapter1_Env prepare</title>
+    <link href="https://chenchen0324.github.io/2023/03/05/ec-website-chapter1-env-prepare/"/>
+    <id>https://chenchen0324.github.io/2023/03/05/ec-website-chapter1-env-prepare/</id>
+    <published>2023-03-05T00:25:00.000Z</published>
+    <updated>2023-03-05T07:30:05.010Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;EC-Website-Chapter1-Env-prepare&quot;&gt;&lt;a href=&quot;#EC-Website-Chapter1-Env-prepare&quot; class=&quot;headerlink&quot; title=&quot;EC Website Chapter1_Env</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
   
   <entry>
     <title>How to build your website - Hexo+Github Page</title>
