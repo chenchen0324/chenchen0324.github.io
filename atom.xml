@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-03-05T07:30:05.010Z</updated>
+  <updated>2023-03-09T15:31:47.766Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenAI Chat API</title>
+    <link href="https://chenchen0324.github.io/2023/03/10/openai-chat-api/"/>
+    <id>https://chenchen0324.github.io/2023/03/10/openai-chat-api/</id>
+    <published>2023-03-10T00:25:00.000Z</published>
+    <updated>2023-03-09T15:31:47.766Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;OpenAI-Chat-API&quot;&gt;&lt;a href=&quot;#OpenAI-Chat-API&quot; class=&quot;headerlink&quot; title=&quot;OpenAI Chat API&quot;&gt;&lt;/a&gt;OpenAI Chat API&lt;/h1&gt;&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="Assistant" scheme="https://chenchen0324.github.io/categories/Assistant/"/>
+    
+    
+    <category term="OpenAI" scheme="https://chenchen0324.github.io/tags/OpenAI/"/>
+    
+    <category term="ChatGPT" scheme="https://chenchen0324.github.io/tags/ChatGPT/"/>
+    
+  </entry>
   
   <entry>
     <title>EC Website Chapter1_Env prepare</title>

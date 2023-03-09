@@ -4,13 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="EC Website Chapter1_Env prepare, CHEN&#39;s Blog">
-    <meta name="description" content="EC Website Chapter1_Env prepare
-Install atom, Git
-Install virtual env
+    <meta name="keywords" content="OpenAI Chat API, CHEN&#39;s Blog">
+    <meta name="description" content="OpenAI Chat API# without stream
+import os
+import openai
 
-python3 -m pip install --user virtualenv
-# create">
+class ChatApp:
+    def __init__(self):
+        # Setting the AP">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +23,7 @@ python3 -m pip install --user virtualenv
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>EC Website Chapter1_Env prepare | CHEN&#39;s Blog</title>
+    <title>OpenAI Chat API | CHEN&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -257,12 +258,12 @@ python3 -m pip install --user virtualenv
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.fullstackpython.com/img/logos/django.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://openai.com/social/twitter.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">EC Website Chapter1_Env prepare</h1>
+                    <h1 class="description center-align post-title">OpenAI Chat API</h1>
                 </div>
             </div>
         </div>
@@ -286,18 +287,27 @@ python3 -m pip install --user virtualenv
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Django/">
-                                <span class="chip bg-color">Django</span>
+                            <a href="/tags/OpenAI/">
+                                <span class="chip bg-color">OpenAI</span>
                             </a>
                         
-                            <a href="/tags/EC/">
-                                <span class="chip bg-color">EC</span>
+                            <a href="/tags/ChatGPT/">
+                                <span class="chip bg-color">ChatGPT</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Assistant/" class="post-category">
+                                Assistant
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -306,7 +316,7 @@ python3 -m pip install --user virtualenv
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-03-05
+                    2023-03-10
                 </div>
                 
 
@@ -315,7 +325,7 @@ python3 -m pip install --user virtualenv
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    59
+                    248
                 </div>
                 
 
@@ -345,31 +355,89 @@ python3 -m pip install --user virtualenv
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="EC-Website-Chapter1-Env-prepare"><a href="#EC-Website-Chapter1-Env-prepare" class="headerlink" title="EC Website Chapter1_Env prepare"></a>EC Website Chapter1_Env prepare</h1><ol>
-<li>Install atom, Git</li>
-<li>Install virtual env</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">python3 <span class="token operator">-</span>m pip install <span class="token operator">-</span><span class="token operator">-</span>user virtualenv
-<span class="token comment"># create a new</span>
-python3 <span class="token operator">-</span>m venv <span class="token punctuation">{</span><span class="token punctuation">{</span>ecom<span class="token punctuation">}</span><span class="token punctuation">}</span>
-<span class="token comment"># enter into virtual env</span>
-source <span class="token punctuation">{</span><span class="token punctuation">{</span>ecom<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>activate
-<span class="token comment"># check all packages</span>
-pip freeze
-<span class="token comment"># deactiavte virtual env</span>
-deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="OpenAI-Chat-API"><a href="#OpenAI-Chat-API" class="headerlink" title="OpenAI Chat API"></a>OpenAI Chat API</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># without stream</span>
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> openai
 
-<ol>
-<li>install Django</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">pip install django<span class="token operator">==</span><span class="token number">3.1</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token keyword">class</span> <span class="token class-name">ChatApp</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Setting the API key to use the OpenAI API</span>
+        openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> <span class="token string">'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'</span>
+        self<span class="token punctuation">.</span>messages <span class="token operator">=</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"system"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"You are a helpful assistant ."</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span>
 
-<ol>
-<li>start project</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">djangp<span class="token operator">-</span>admin startproject <span class="token punctuation">{</span><span class="token punctuation">{</span>ec<span class="token punctuation">}</span><span class="token punctuation">}</span>
-cd <span class="token punctuation">{</span><span class="token punctuation">{</span>ec<span class="token punctuation">}</span><span class="token punctuation">}</span>
-python manage<span class="token punctuation">.</span>py runserver<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+    <span class="token keyword">def</span> <span class="token function">chat</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> user<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>messages<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> message<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        response <span class="token operator">=</span> openai<span class="token punctuation">.</span>ChatCompletion<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
+            model<span class="token operator">=</span><span class="token string">"gpt-3.5-turbo"</span><span class="token punctuation">,</span>
+            user <span class="token operator">=</span> user<span class="token punctuation">,</span>
+            messages<span class="token operator">=</span>self<span class="token punctuation">.</span>messages
+        <span class="token punctuation">)</span>
+        <span class="token comment"># enable here if you needs consecutive conversation</span>
+  <span class="token comment">#      self.messages.append({"role": "assistant", "content": response["choices"][0]["message"].content})</span>
+        <span class="token keyword">return</span> <span class="token string">"Assistant:\n"</span> <span class="token operator">+</span> response<span class="token punctuation">[</span><span class="token string">"choices"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">"message"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">"content"</span><span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'User Name:'</span><span class="token punctuation">)</span>
+user <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+userPrompt <span class="token operator">=</span> ChatApp<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span> <span class="token number">1</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\nPrompt:'</span><span class="token punctuation">)</span>
+    prompt <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">if</span> prompt <span class="token operator">==</span> <span class="token string">'end'</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+        
+    completion <span class="token operator">=</span> userPrompt<span class="token punctuation">.</span>chat<span class="token punctuation">(</span>user<span class="token punctuation">,</span> prompt<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>completion<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># with stream</span>
+
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> openai
+<span class="token keyword">import</span> sseclient
+
+<span class="token keyword">class</span> <span class="token class-name">ChatApp</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># Setting the API key to use the OpenAI API</span>
+        openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> <span class="token string">'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'</span>
+        self<span class="token punctuation">.</span>messages <span class="token operator">=</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"system"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"You are a helpful assistant ."</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">chat</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> user<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>messages<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> message<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        response <span class="token operator">=</span> openai<span class="token punctuation">.</span>ChatCompletion<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
+            model<span class="token operator">=</span><span class="token string">"gpt-3.5-turbo"</span><span class="token punctuation">,</span>
+            user <span class="token operator">=</span> user<span class="token punctuation">,</span>
+            stream <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">,</span>
+            messages<span class="token operator">=</span>self<span class="token punctuation">.</span>messages
+        <span class="token punctuation">)</span>
+        
+        ans <span class="token operator">=</span> <span class="token string">''</span>
+        <span class="token keyword">for</span> event <span class="token keyword">in</span> response<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token string">'content'</span> <span class="token keyword">in</span> event<span class="token punctuation">[</span><span class="token string">'choices'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'delta'</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                ans <span class="token operator">+=</span> event<span class="token punctuation">[</span><span class="token string">'choices'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'delta'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'content'</span><span class="token punctuation">]</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span>event<span class="token punctuation">[</span><span class="token string">'choices'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'delta'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'content'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">,</span> flush<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+        
+        <span class="token comment"># enable here if you needs consecutive conversation</span>
+        self<span class="token punctuation">.</span>messages<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"assistant"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> ans<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'User Name:'</span><span class="token punctuation">)</span>
+user <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+userPrompt <span class="token operator">=</span> ChatApp<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span> <span class="token number">1</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\nPrompt:'</span><span class="token punctuation">)</span>
+    prompt <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">if</span> prompt <span class="token operator">==</span> <span class="token string">'end'</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Assistant:'</span><span class="token punctuation">)</span>
+    completion <span class="token operator">=</span> userPrompt<span class="token punctuation">.</span>chat<span class="token punctuation">(</span>user<span class="token punctuation">,</span> prompt<span class="token punctuation">)</span>
+    
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -383,12 +451,12 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Django/">
-                                    <span class="chip bg-color">Django</span>
+                                <a href="/tags/OpenAI/">
+                                    <span class="chip bg-color">OpenAI</span>
                                 </a>
                             
-                                <a href="/tags/EC/">
-                                    <span class="chip bg-color">EC</span>
+                                <a href="/tags/ChatGPT/">
+                                    <span class="chip bg-color">ChatGPT</span>
                                 </a>
                             
                         </div>
@@ -467,9 +535,10 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/03/10/openai-chat-api/">
                     <div class="card-image">
@@ -486,9 +555,9 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -501,6 +570,7 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -523,12 +593,12 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/24/how-to-build-your-website-hexo-github-page/">
+                <a href="/2023/03/05/ec-website-chapter1-env-prepare/">
                     <div class="card-image">
                         
-                        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*ZLfPdBuEy3SgJscw.jpg" class="responsive-img" alt="How to build your website - Hexo+Github Page">
+                        <img src="https://www.fullstackpython.com/img/logos/django.png" class="responsive-img" alt="EC Website Chapter1_Env prepare">
                         
-                        <span class="card-title">How to build your website - Hexo+Github Page</span>
+                        <span class="card-title">EC Website Chapter1_Env prepare</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -539,16 +609,12 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-05
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Website/" class="post-category">
-                                    Website
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            CHEN CHEN
                             
                         </span>
                     </div>
@@ -556,12 +622,12 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/Django/">
+                        <span class="chip bg-color">Django</span>
                     </a>
                     
-                    <a href="/tags/Github/">
-                        <span class="chip bg-color">Github</span>
+                    <a href="/tags/EC/">
+                        <span class="chip bg-color">EC</span>
                     </a>
                     
                 </div>
