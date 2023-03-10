@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-03-09T15:31:47.766Z</updated>
+  <updated>2023-03-10T13:51:39.701Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenAI FineTune</title>
+    <link href="https://chenchen0324.github.io/2023/03/11/openai-finetune/"/>
+    <id>https://chenchen0324.github.io/2023/03/11/openai-finetune/</id>
+    <published>2023-03-11T00:25:00.000Z</published>
+    <updated>2023-03-10T13:51:39.701Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;OpenAI-FineTune&quot;&gt;&lt;a href=&quot;#OpenAI-FineTune&quot; class=&quot;headerlink&quot; title=&quot;OpenAI FineTune&quot;&gt;&lt;/a&gt;OpenAI FineTune&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Prepare</summary>
+        
+      
+    
+    
+    
+    
+    <category term="OpenAI" scheme="https://chenchen0324.github.io/tags/OpenAI/"/>
+    
+    <category term="FineTune" scheme="https://chenchen0324.github.io/tags/FineTune/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenAI Chat API</title>
