@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>How to use EC2 to run Jupyter Notebook</title>
+      <link href="/2023/03/25/how-to-use-ec2-to-run-jupyter-notebook/"/>
+      <url>/2023/03/25/how-to-use-ec2-to-run-jupyter-notebook/</url>
+      
+        <content type="html"><![CDATA[<h1 id="EC2-How-to-use-EC2-to-run-Jupyter-Notebook"><a href="#EC2-How-to-use-EC2-to-run-Jupyter-Notebook" class="headerlink" title="[EC2] How to use EC2 to run Jupyter Notebook"></a>[EC2] How to use EC2 to run Jupyter Notebook</h1><ol><li>Launch an EC2 instance on the Amazon Linux machine.</li><li>Connect to the instance via SSH</li></ol><ul><li>check details:<ol><li>Open a terminal or command prompt on your local machine.</li><li>Locate your private key file (.pem) that you have created or downloaded when you launched your EC2 instance. Note: If you don’t have a key pair, you can create a new one in the EC2 console.</li><li>Change the permission of the key pair file using the command:</li></ol>  <pre class="line-numbers language-json" data-language="json"><code class="language-json">chmod <span class="token number">400</span> /path/to/your/key.pem<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol><li>Connect to your EC2 instance using the command:</li></ol>  <pre class="line-numbers language-json" data-language="json"><code class="language-json">ssh -i /path/to/your/key.pem ec2-user@your_ec2_instance_public_ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul><ol><li>Update the package list by running the command:</li></ol><pre class="line-numbers language-json" data-language="json"><code class="language-json">sudo yum update -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol><li>Install pip and python3 by running the command:</li></ol><pre class="line-numbers language-json" data-language="json"><code class="language-json">sudo yum install python3-pip -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol><li>Install Jupyter Notebook by running the command:</li></ol><pre class="line-numbers language-json" data-language="json"><code class="language-json">pip3 install jupyter<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol><li>Generate the Jupyter configuration file by running the command:</li></ol><pre class="line-numbers language-json" data-language="json"><code class="language-json">jupyter notebook --generate-config<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol><li>Set a password for Jupyter Notebook by running the command:</li></ol><pre class="line-numbers language-json" data-language="json"><code class="language-json">jupyter notebook password<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol><li>Create a new SSL certificate by running the command:</li></ol><pre class="line-numbers language-json" data-language="json"><code class="language-json">openssl req -x509 -nodes -days <span class="token number">365</span> -newkey rsa<span class="token operator">:</span><span class="token number">2048</span> -keyout mykey.key -out mycert.pem<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol><li>Start the Jupyter Notebook server by running the command:</li></ol><pre class="line-numbers language-json" data-language="json"><code class="language-json">jupyter notebook --ip=<span class="token number">0.0</span>.<span class="token number">0.0</span> --port=<span class="token number">8888</span> --no-browser --certfile=mycert.pem --keyfile=mykey.key<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol><li>Open your web browser and access the Jupyter Notebook by entering the URL <strong><code>https://&lt;your_ec2_instance_public_ip&gt;:8888</code></strong>.</li><li><strong><strong>How to add a new key pair to your existing AWS EC2 Instances</strong></strong> <a href="https://linux.how2shout.com/add-a-new-key-pair-to-your-exisitng-aws-ec2-instances/">https://linux.how2shout.com/add-a-new-key-pair-to-your-exisitng-aws-ec2-instances/</a></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> AWS </tag>
+            
+            <tag> EC2 </tag>
+            
+            <tag> Jupyter Notebook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>OpenAI FineTune</title>
       <link href="/2023/03/11/openai-finetune/"/>
       <url>/2023/03/11/openai-finetune/</url>

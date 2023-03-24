@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-03-10T13:51:39.701Z</updated>
+  <updated>2023-03-24T17:30:19.458Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to use EC2 to run Jupyter Notebook</title>
+    <link href="https://chenchen0324.github.io/2023/03/25/how-to-use-ec2-to-run-jupyter-notebook/"/>
+    <id>https://chenchen0324.github.io/2023/03/25/how-to-use-ec2-to-run-jupyter-notebook/</id>
+    <published>2023-03-25T00:25:00.000Z</published>
+    <updated>2023-03-24T17:30:19.458Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;EC2-How-to-use-EC2-to-run-Jupyter-Notebook&quot;&gt;&lt;a href=&quot;#EC2-How-to-use-EC2-to-run-Jupyter-Notebook&quot; class=&quot;headerlink&quot; title=&quot;[EC2]</summary>
+        
+      
+    
+    
+    
+    
+    <category term="AWS" scheme="https://chenchen0324.github.io/tags/AWS/"/>
+    
+    <category term="EC2" scheme="https://chenchen0324.github.io/tags/EC2/"/>
+    
+    <category term="Jupyter Notebook" scheme="https://chenchen0324.github.io/tags/Jupyter-Notebook/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenAI FineTune</title>
