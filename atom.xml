@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>CHEN&#39;s Blog</title>
+  <title>chen&#39;s Blog</title>
   
-  <subtitle>南无阿弥托福</subtitle>
+  
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-03-24T17:30:19.458Z</updated>
+  <updated>2023-04-06T07:48:35.075Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
-    <name>CHEN CHEN</name>
+    <name>chen chen</name>
     
   </author>
   
@@ -21,7 +21,7 @@
     <link href="https://chenchen0324.github.io/2023/03/25/how-to-use-ec2-to-run-jupyter-notebook/"/>
     <id>https://chenchen0324.github.io/2023/03/25/how-to-use-ec2-to-run-jupyter-notebook/</id>
     <published>2023-03-25T00:25:00.000Z</published>
-    <updated>2023-03-24T17:30:19.458Z</updated>
+    <updated>2023-04-06T07:48:35.075Z</updated>
     
     
       
@@ -48,7 +48,7 @@
     <link href="https://chenchen0324.github.io/2023/03/11/openai-finetune/"/>
     <id>https://chenchen0324.github.io/2023/03/11/openai-finetune/</id>
     <published>2023-03-11T00:25:00.000Z</published>
-    <updated>2023-03-10T13:51:39.701Z</updated>
+    <updated>2023-04-06T07:49:58.757Z</updated>
     
     
       
@@ -74,7 +74,7 @@
     <link href="https://chenchen0324.github.io/2023/03/10/openai-chat-api/"/>
     <id>https://chenchen0324.github.io/2023/03/10/openai-chat-api/</id>
     <published>2023-03-10T00:25:00.000Z</published>
-    <updated>2023-03-09T15:31:47.766Z</updated>
+    <updated>2023-04-06T07:49:23.423Z</updated>
     
     
       
@@ -101,7 +101,7 @@
     <link href="https://chenchen0324.github.io/2023/03/05/ec-website-chapter1-env-prepare/"/>
     <id>https://chenchen0324.github.io/2023/03/05/ec-website-chapter1-env-prepare/</id>
     <published>2023-03-05T00:25:00.000Z</published>
-    <updated>2023-03-24T17:23:13.305Z</updated>
+    <updated>2023-04-06T07:47:04.226Z</updated>
     
     
       

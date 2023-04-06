@@ -4,10 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="How to use EC2 to run Jupyter Notebook, CHEN&#39;s Blog">
+    <meta name="keywords" content="How to use EC2 to run Jupyter Notebook, chen&#39;s Blog">
     <meta name="description" content="[EC2] How to use EC2 to run Jupyter Notebook
 Launch an EC2 instance on the Amazon Linux machine.
-Connect to the instance">
+
+Connect to the instanc">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +20,7 @@ Connect to the instance">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>How to use EC2 to run Jupyter Notebook | CHEN&#39;s Blog</title>
+    <title>How to use EC2 to run Jupyter Notebook | chen&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -56,7 +57,7 @@ Connect to the instance">
 
 <meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="CHEN's Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="chen's Blog" type="application/atom+xml">
 </head>
 
 
@@ -69,7 +70,7 @@ Connect to the instance">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">CHEN&#39;s Blog</span>
+                    <span class="logo-span">chen&#39;s Blog</span>
                 </a>
             </div>
             
@@ -162,7 +163,7 @@ Connect to the instance">
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">CHEN&#39;s Blog</div>
+        <div class="logo-name">chen&#39;s Blog</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -347,8 +348,10 @@ Connect to the instance">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="EC2-How-to-use-EC2-to-run-Jupyter-Notebook"><a href="#EC2-How-to-use-EC2-to-run-Jupyter-Notebook" class="headerlink" title="[EC2] How to use EC2 to run Jupyter Notebook"></a>[EC2] How to use EC2 to run Jupyter Notebook</h1><ol>
-<li>Launch an EC2 instance on the Amazon Linux machine.</li>
-<li>Connect to the instance via SSH</li>
+<li><p>Launch an EC2 instance on the Amazon Linux machine.</p>
+</li>
+<li><p>Connect to the instance via SSH</p>
+</li>
 </ol>
 <ul>
 <li>check details:<ol>
@@ -357,50 +360,52 @@ Connect to the instance">
 <li>Change the permission of the key pair file using the command:</li>
 </ol>
   <pre class="line-numbers language-json" data-language="json"><code class="language-json">chmod <span class="token number">400</span> /path/to/your/key.pem<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol>
+<ol start="4">
 <li>Connect to your EC2 instance using the command:</li>
 </ol>
   <pre class="line-numbers language-json" data-language="json"><code class="language-json">ssh -i /path/to/your/key.pem ec2-user@your_ec2_instance_public_ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ul>
-<ol>
+<ol start="3">
 <li>Update the package list by running the command:</li>
 </ol>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json">sudo yum update -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ol>
+<ol start="4">
 <li>Install pip and python3 by running the command:</li>
 </ol>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json">sudo yum install python3-pip -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ol>
+<ol start="5">
 <li>Install Jupyter Notebook by running the command:</li>
 </ol>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json">pip3 install jupyter<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ol>
+<ol start="6">
 <li>Generate the Jupyter configuration file by running the command:</li>
 </ol>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json">jupyter notebook --generate-config<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ol>
+<ol start="7">
 <li>Set a password for Jupyter Notebook by running the command:</li>
 </ol>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json">jupyter notebook password<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ol>
+<ol start="8">
 <li>Create a new SSL certificate by running the command:</li>
 </ol>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json">openssl req -x509 -nodes -days <span class="token number">365</span> -newkey rsa<span class="token operator">:</span><span class="token number">2048</span> -keyout mykey.key -out mycert.pem<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ol>
+<ol start="9">
 <li>Start the Jupyter Notebook server by running the command:</li>
 </ol>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json">jupyter notebook --ip=<span class="token number">0.0</span>.<span class="token number">0.0</span> --port=<span class="token number">8888</span> --no-browser --certfile=mycert.pem --keyfile=mykey.key<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ol>
-<li>Open your web browser and access the Jupyter Notebook by entering the URL <strong><code>https://&lt;your_ec2_instance_public_ip&gt;:8888</code></strong>.</li>
-<li><strong><strong>How to add a new key pair to your existing AWS EC2 Instances</strong></strong> <a target="_blank" rel="noopener" href="https://linux.how2shout.com/add-a-new-key-pair-to-your-exisitng-aws-ec2-instances/">https://linux.how2shout.com/add-a-new-key-pair-to-your-exisitng-aws-ec2-instances/</a></li>
+<ol start="10">
+<li><p>Open your web browser and access the Jupyter Notebook by entering the URL <strong><code>https://&lt;your_ec2_instance_public_ip&gt;:8888</code></strong>.</p>
+</li>
+<li><p><strong><strong>How to add a new key pair to your existing AWS EC2 Instances</strong></strong> <a target="_blank" rel="noopener" href="https://linux.how2shout.com/add-a-new-key-pair-to-your-exisitng-aws-ec2-instances/">https://linux.how2shout.com/add-a-new-key-pair-to-your-exisitng-aws-ec2-instances/</a></p>
+</li>
 </ol>
 
                 
@@ -637,8 +642,8 @@ Connect to the instance">
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + 'From: CHEN&#39;s Blog<br />'
-            + 'Author: CHEN CHEN<br />'
+            + 'From: chen&#39;s Blog<br />'
+            + 'Author: chen chen<br />'
             + 'Link: <a href="' + url + '">' + url + '</a><br />'
             + 'Copyright © 2023 CHEN CHEN';
 
@@ -762,60 +767,6 @@ Connect to the instance">
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
-
-    
 
     <div class="container row center-align"
          style="margin-bottom: 0px !important;">
@@ -824,7 +775,7 @@ Connect to the instance">
             
                 <span id="year">2023</span>
             
-            <a href="/about" target="_blank">CHEN CHEN</a>
+            <a href="/about" target="_blank">chen chen</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
