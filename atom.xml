@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-04-07T17:19:26.953Z</updated>
+  <updated>2023-04-07T17:31:57.722Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -17,11 +17,145 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo</title>
+    <title>EC _ EC Website Chapter2_Url/Http/Template</title>
+    <link href="https://chenchen0324.github.io/2023/04/08/ec-ec-website-chapter2-url-http-template/"/>
+    <id>https://chenchen0324.github.io/2023/04/08/ec-ec-website-chapter2-url-http-template/</id>
+    <published>2023-04-08T00:25:00.000Z</published>
+    <updated>2023-04-07T17:31:57.722Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;EC _ EC Website Chapter2_Url/Http/Template&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;add url for homepage&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EC2 _ How to use EC2 to run Jupyter Notebook</title>
+    <link href="https://chenchen0324.github.io/2023/03/25/ec2-how-to-use-ec2-to-run-jupyter-notebook/"/>
+    <id>https://chenchen0324.github.io/2023/03/25/ec2-how-to-use-ec2-to-run-jupyter-notebook/</id>
+    <published>2023-03-25T00:25:00.000Z</published>
+    <updated>2023-04-07T17:32:35.989Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;EC2-How-to-use-EC2-to-run-Jupyter-Notebook&quot;&gt;&lt;a href=&quot;#EC2-How-to-use-EC2-to-run-Jupyter-Notebook&quot; class=&quot;headerlink&quot; title=&quot;EC2 _</summary>
+        
+      
+    
+    
+    
+    
+    <category term="AWS" scheme="https://chenchen0324.github.io/tags/AWS/"/>
+    
+    <category term="EC2" scheme="https://chenchen0324.github.io/tags/EC2/"/>
+    
+    <category term="Jupyter Notebook" scheme="https://chenchen0324.github.io/tags/Jupyter-Notebook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenAI _ FineTune</title>
+    <link href="https://chenchen0324.github.io/2023/03/11/openai-finetune/"/>
+    <id>https://chenchen0324.github.io/2023/03/11/openai-finetune/</id>
+    <published>2023-03-11T00:25:00.000Z</published>
+    <updated>2023-04-07T17:33:21.209Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;OpenAI-FineTune&quot;&gt;&lt;a href=&quot;#OpenAI-FineTune&quot; class=&quot;headerlink&quot; title=&quot;OpenAI _ FineTune&quot;&gt;&lt;/a&gt;OpenAI _ FineTune&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Prepare</summary>
+        
+      
+    
+    
+    
+    
+    <category term="OpenAI" scheme="https://chenchen0324.github.io/tags/OpenAI/"/>
+    
+    <category term="FineTune" scheme="https://chenchen0324.github.io/tags/FineTune/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenAI _ Chat API</title>
+    <link href="https://chenchen0324.github.io/2023/03/10/openai-chat-api/"/>
+    <id>https://chenchen0324.github.io/2023/03/10/openai-chat-api/</id>
+    <published>2023-03-10T00:25:00.000Z</published>
+    <updated>2023-04-07T17:33:07.100Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;OpenAI-Chat-API&quot;&gt;&lt;a href=&quot;#OpenAI-Chat-API&quot; class=&quot;headerlink&quot; title=&quot;OpenAI _ Chat API&quot;&gt;&lt;/a&gt;OpenAI _ Chat API&lt;/h1&gt;&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="Assistant" scheme="https://chenchen0324.github.io/categories/Assistant/"/>
+    
+    
+    <category term="OpenAI" scheme="https://chenchen0324.github.io/tags/OpenAI/"/>
+    
+    <category term="ChatGPT" scheme="https://chenchen0324.github.io/tags/ChatGPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EC _ Website Chapter1_Env prepare</title>
+    <link href="https://chenchen0324.github.io/2023/03/05/ec-website-chapter1-env-prepare/"/>
+    <id>https://chenchen0324.github.io/2023/03/05/ec-website-chapter1-env-prepare/</id>
+    <published>2023-03-05T00:25:00.000Z</published>
+    <updated>2023-04-07T17:32:19.129Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;EC-Website-Chapter1-Env-prepare&quot;&gt;&lt;a href=&quot;#EC-Website-Chapter1-Env-prepare&quot; class=&quot;headerlink&quot; title=&quot;EC _ Website Chapter1_Env</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo _ How to build your website_Hexo+Github Page</title>
     <link href="https://chenchen0324.github.io/2023/02/24/hexo-how-to-build-your-website-hexo-github-page/"/>
     <id>https://chenchen0324.github.io/2023/02/24/hexo-how-to-build-your-website-hexo-github-page/</id>
     <published>2023-02-24T00:25:00.000Z</published>
-    <updated>2023-04-07T17:19:26.953Z</updated>
+    <updated>2023-04-07T17:34:21.866Z</updated>
     
     
       
