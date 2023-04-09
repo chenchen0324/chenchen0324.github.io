@@ -4,15 +4,20 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo _ How to build your website_Hexo+Github Page, chen&#39;s Blog">
-    <meta name="description" content="Hexo _ How to build your website_Hexo+Github Page
+    <meta name="keywords" content="Hexo / How to build your website with Hexo+Github Page, chen&#39;s Blog">
+    <meta name="description" content="
 Environment
 Install Git
 Install Node.js
 $ npm install -g hexo-cli
 
 
-Ge">
+Get Started
+$ hexo init {{folder}}
+$ hexo server
+
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +29,7 @@ Ge">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo _ How to build your website_Hexo+Github Page | chen&#39;s Blog</title>
+    <title>Hexo / How to build your website with Hexo+Github Page | chen&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -264,7 +269,7 @@ Ge">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo _ How to build your website_Hexo+Github Page</h1>
+                    <h1 class="description center-align post-title">Hexo / How to build your website with Hexo+Github Page</h1>
                 </div>
             </div>
         </div>
@@ -326,7 +331,7 @@ Ge">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    198
+                    189
                 </div>
                 
 
@@ -356,7 +361,7 @@ Ge">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Hexo-How-to-build-your-website-Hexo-Github-Page"><a href="#Hexo-How-to-build-your-website-Hexo-Github-Page" class="headerlink" title="Hexo _ How to build your website_Hexo+Github Page"></a>Hexo _ How to build your website_Hexo+Github Page</h1><ul>
+                <ul>
 <li>Environment<ol>
 <li>Install Git</li>
 <li>Install Node.js</li>
@@ -451,7 +456,7 @@ Ge">
     <div id="rewardModal" class="modal">
         <div class="modal-content">
             <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <h4 class="reward-title">Thank you for your generosity!</h4>
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs row">
@@ -508,9 +513,9 @@ Ge">
                 <a href="/2023/03/05/ec-website-chapter1-env-prepare/">
                     <div class="card-image">
                         
-                        <img src="https://www.openapp.ie/wp-content/uploads/2015/03/Django.png" class="responsive-img" alt="EC _ Website Chapter1_Env prepare">
+                        <img src="https://www.openapp.ie/wp-content/uploads/2015/03/Django.png" class="responsive-img" alt="EC / Website Chapter1 Env Prepare">
                         
-                        <span class="card-title">EC _ Website Chapter1_Env prepare</span>
+                        <span class="card-title">EC / Website Chapter1 Env Prepare</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -553,12 +558,12 @@ Ge">
                 Current&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/24/hexo-how-to-build-your-website-hexo-github-page/">
+                <a href="/2023/02/24/hexo-how-to-build-your-website-with-hexo-github-page/">
                     <div class="card-image">
                         
-                        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*ZLfPdBuEy3SgJscw.jpg" class="responsive-img" alt="Hexo _ How to build your website_Hexo+Github Page">
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*ZLfPdBuEy3SgJscw.jpg" class="responsive-img" alt="Hexo / How to build your website with Hexo+Github Page">
                         
-                        <span class="card-title">Hexo _ How to build your website_Hexo+Github Page</span>
+                        <span class="card-title">Hexo / How to build your website with Hexo+Github Page</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -605,43 +610,6 @@ Ge">
 
 </div>
 
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('10')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + 'From: chen&#39;s Blog<br />'
-            + 'Author: chen chen<br />'
-            + 'Link: <a href="' + url + '">' + url + '</a><br />'
-            + 'Copyright © 2023 CHEN CHEN';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
 
 
 <!-- 代码块功能依赖 -->

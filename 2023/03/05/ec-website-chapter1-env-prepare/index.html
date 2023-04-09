@@ -4,15 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="EC _ Website Chapter1_Env prepare, chen&#39;s Blog">
-    <meta name="description" content="EC _ Website Chapter1_Env prepare
+    <meta name="keywords" content="EC / Website Chapter1 Env Prepare, chen&#39;s Blog">
+    <meta name="description" content="
 Install atom, Git
 
 Install virtual env
 
 
 python3 -m pip install --user virtualenv
-# cr">
+# create a new
+python3 -m venv {{ecom">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +25,7 @@ python3 -m pip install --user virtualenv
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>EC _ Website Chapter1_Env prepare | chen&#39;s Blog</title>
+    <title>EC / Website Chapter1 Env Prepare | chen&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -264,7 +265,7 @@ python3 -m pip install --user virtualenv
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">EC _ Website Chapter1_Env prepare</h1>
+                    <h1 class="description center-align post-title">EC / Website Chapter1 Env Prepare</h1>
                 </div>
             </div>
         </div>
@@ -317,7 +318,7 @@ python3 -m pip install --user virtualenv
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    60
+                    55
                 </div>
                 
 
@@ -347,7 +348,7 @@ python3 -m pip install --user virtualenv
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="EC-Website-Chapter1-Env-prepare"><a href="#EC-Website-Chapter1-Env-prepare" class="headerlink" title="EC _ Website Chapter1_Env prepare"></a>EC _ Website Chapter1_Env prepare</h1><ol>
+                <ol>
 <li><p>Install atom, Git</p>
 </li>
 <li><p>Install virtual env</p>
@@ -421,7 +422,7 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
     <div id="rewardModal" class="modal">
         <div class="modal-content">
             <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <h4 class="reward-title">Thank you for your generosity!</h4>
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs row">
@@ -478,9 +479,9 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
                 <a href="/2023/03/10/openai-chat-api/">
                     <div class="card-image">
                         
-                        <img src="https://openai.com/social/twitter.png" class="responsive-img" alt="OpenAI _ Chat API">
+                        <img src="https://openai.com/social/twitter.png" class="responsive-img" alt="OpenAI / Chat API">
                         
-                        <span class="card-title">OpenAI _ Chat API</span>
+                        <span class="card-title">OpenAI / Chat API</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -527,12 +528,12 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/24/hexo-how-to-build-your-website-hexo-github-page/">
+                <a href="/2023/02/24/hexo-how-to-build-your-website-with-hexo-github-page/">
                     <div class="card-image">
                         
-                        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*ZLfPdBuEy3SgJscw.jpg" class="responsive-img" alt="Hexo _ How to build your website_Hexo+Github Page">
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*ZLfPdBuEy3SgJscw.jpg" class="responsive-img" alt="Hexo / How to build your website with Hexo+Github Page">
                         
-                        <span class="card-title">Hexo _ How to build your website_Hexo+Github Page</span>
+                        <span class="card-title">Hexo / How to build your website with Hexo+Github Page</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -578,43 +579,6 @@ python manage<span class="token punctuation">.</span>py runserver<span aria-hidd
 
 </div>
 
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('10')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + 'From: chen&#39;s Blog<br />'
-            + 'Author: chen chen<br />'
-            + 'Link: <a href="' + url + '">' + url + '</a><br />'
-            + 'Copyright © 2023 CHEN CHEN';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
 
 
 <!-- 代码块功能依赖 -->

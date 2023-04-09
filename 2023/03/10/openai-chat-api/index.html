@@ -4,14 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="OpenAI _ Chat API, chen&#39;s Blog">
-    <meta name="description" content="OpenAI _ Chat API# without stream
+    <meta name="keywords" content="OpenAI / Chat API, chen&#39;s Blog">
+    <meta name="description" content="# without stream
 import os
 import openai
 
 class ChatApp:
     def __init__(self):
-        # Setting the ">
+        # Setting the API key to use th">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +23,7 @@ class ChatApp:
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>OpenAI _ Chat API | chen&#39;s Blog</title>
+    <title>OpenAI / Chat API | chen&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -263,7 +263,7 @@ class ChatApp:
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">OpenAI _ Chat API</h1>
+                    <h1 class="description center-align post-title">OpenAI / Chat API</h1>
                 </div>
             </div>
         </div>
@@ -325,7 +325,7 @@ class ChatApp:
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    249
+                    245
                 </div>
                 
 
@@ -355,7 +355,7 @@ class ChatApp:
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="OpenAI-Chat-API"><a href="#OpenAI-Chat-API" class="headerlink" title="OpenAI _ Chat API"></a>OpenAI _ Chat API</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># without stream</span>
+                <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># without stream</span>
 <span class="token keyword">import</span> os
 <span class="token keyword">import</span> openai
 
@@ -487,7 +487,7 @@ userPrompt <span class="token operator">=</span> ChatApp<span class="token punct
     <div id="rewardModal" class="modal">
         <div class="modal-content">
             <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <h4 class="reward-title">Thank you for your generosity!</h4>
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs row">
@@ -544,9 +544,9 @@ userPrompt <span class="token operator">=</span> ChatApp<span class="token punct
                 <a href="/2023/03/11/openai-finetune/">
                     <div class="card-image">
                         
-                        <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6b11d9ff-0ff8-4bf1-af27-7a927f86cdc0_1920x1080.jpeg" class="responsive-img" alt="OpenAI _ FineTune">
+                        <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6b11d9ff-0ff8-4bf1-af27-7a927f86cdc0_1920x1080.jpeg" class="responsive-img" alt="OpenAI / FineTune">
                         
-                        <span class="card-title">OpenAI _ FineTune</span>
+                        <span class="card-title">OpenAI / FineTune</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -592,9 +592,9 @@ userPrompt <span class="token operator">=</span> ChatApp<span class="token punct
                 <a href="/2023/03/05/ec-website-chapter1-env-prepare/">
                     <div class="card-image">
                         
-                        <img src="https://www.openapp.ie/wp-content/uploads/2015/03/Django.png" class="responsive-img" alt="EC _ Website Chapter1_Env prepare">
+                        <img src="https://www.openapp.ie/wp-content/uploads/2015/03/Django.png" class="responsive-img" alt="EC / Website Chapter1 Env Prepare">
                         
-                        <span class="card-title">EC _ Website Chapter1_Env prepare</span>
+                        <span class="card-title">EC / Website Chapter1 Env Prepare</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -636,43 +636,6 @@ userPrompt <span class="token operator">=</span> ChatApp<span class="token punct
 
 </div>
 
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('10')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + 'From: chen&#39;s Blog<br />'
-            + 'Author: chen chen<br />'
-            + 'Link: <a href="' + url + '">' + url + '</a><br />'
-            + 'Copyright © 2023 CHEN CHEN';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
 
 
 <!-- 代码块功能依赖 -->
