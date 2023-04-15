@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-04-07T17:35:32.967Z</updated>
+  <updated>2023-04-15T03:42:50.560Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL / Get Started with SQL</title>
+    <link href="https://chenchen0324.github.io/2023/04/11/sql-get-started-with-sql/"/>
+    <id>https://chenchen0324.github.io/2023/04/11/sql-get-started-with-sql/</id>
+    <published>2023-04-11T00:25:00.000Z</published>
+    <updated>2023-04-15T03:42:50.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;sql&lt;/span&gt; oneline &lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="SQL" scheme="https://chenchen0324.github.io/tags/SQL/"/>
+    
+  </entry>
   
   <entry>
     <title>EC / EC Website Chapter2 Url+Http+Template</title>
