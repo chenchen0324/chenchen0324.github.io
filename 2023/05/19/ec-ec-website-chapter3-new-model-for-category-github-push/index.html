@@ -4,14 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo / Custom Domain, chen&#39;s Blog">
+    <meta name="keywords" content="EC / EC Website Chapter3_New model for category+Github push, chen&#39;s Blog">
     <meta name="description" content="
-Get your domain from google domains or Aliyun
-Copy your domain and paste into Github Pages / Custom domain
+start new app for category
+
+python manage.py startapp category
 
 
+update installed_apps
 
-Configure">
+#ec/ec/settings.py
+INSTALLED_AP">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +26,7 @@ Configure">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo / Custom Domain | chen&#39;s Blog</title>
+    <title>EC / EC Website Chapter3_New model for category+Github push | chen&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -258,12 +261,12 @@ Configure">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/cover.jpeg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.openapp.ie/wp-content/uploads/2015/03/Django.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo / Custom Domain</h1>
+                    <h1 class="description center-align post-title">EC / EC Website Chapter3_New model for category+Github push</h1>
                 </div>
             </div>
         </div>
@@ -287,16 +290,12 @@ Configure">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/Django/">
+                                <span class="chip bg-color">Django</span>
                             </a>
                         
-                            <a href="/tags/Github/">
-                                <span class="chip bg-color">Github</span>
-                            </a>
-                        
-                            <a href="/tags/Google-domain/">
-                                <span class="chip bg-color">Google domain</span>
+                            <a href="/tags/EC/">
+                                <span class="chip bg-color">EC</span>
                             </a>
                         
                     </div>
@@ -311,7 +310,7 @@ Configure">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-05-16
+                    2023-05-19
                 </div>
                 
 
@@ -320,7 +319,7 @@ Configure">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    40
+                    266
                 </div>
                 
 
@@ -351,27 +350,92 @@ Configure">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ol>
-<li>Get your domain from google domains or Aliyun</li>
-<li>Copy your domain and paste into Github Pages / Custom domain</li>
+<li>start new app for category</li>
 </ol>
-<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Copy+your+domain+and+paste+into+Github+Pages+%3A+Custom+domain.png"></p>
-<ol start="3">
-<li>Configure Github Page DNS for your domain</li>
-</ol>
-<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Configure+Github+Page+DNS+for+your+domain.png"></p>
-<ol start="4">
-<li>Create a CNAME for <a target="_blank" rel="noopener" href="http://www.yourdomain/">www.yourdomain</a></li>
-</ol>
-<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Create+a+CNAME+for+www.yourdomain.png"></p>
-<ol start="5">
-<li>Add a verified domain</li>
-</ol>
-<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Add+a+verified+domain.png"></p>
-<ol start="6">
-<li>Add a DNS txt record</li>
-</ol>
-<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Add+a+DNS+txt+record.png"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py startapp category<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<ol start="2">
+<li>update installed_apps</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#ec/ec/settings.py</span>
+INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'django.contrib.admin'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.auth'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.contenttypes'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.sessions'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.messages'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.staticfiles'</span><span class="token punctuation">,</span>
+    <span class="token string">'category'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>Create model (database table) for category</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#ec/category/models.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+
+<span class="token comment"># Create your models here.</span>
+<span class="token keyword">class</span> <span class="token class-name">Category</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    category_name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    slug <span class="token operator">=</span> models<span class="token punctuation">.</span>SlugField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    description <span class="token operator">=</span> models<span class="token punctuation">.</span>TextField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">255</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    cat_image <span class="token operator">=</span> models<span class="token punctuation">.</span>ImageField<span class="token punctuation">(</span>upload_to<span class="token operator">=</span><span class="token string">'photos/categories'</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+        verbose_name <span class="token operator">=</span> <span class="token string">'category'</span>
+        verbose_name_plural <span class="token operator">=</span> <span class="token string">'categories'</span>
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>category_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>add Category into admin</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#ec/category/admin.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Category
+
+<span class="token comment"># Register your models here.</span>
+
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Category<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="5">
+<li>Update the database</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py makemigrations
+python manage<span class="token punctuation">.</span>py migrate<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ol start="6">
+<li>create admin for application</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py createsuperuser<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="7">
+<li>check Category table in <a target="_blank" rel="noopener" href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a></li>
+<li>create a new repository</li>
+<li>git –version</li>
+<li><code>git init</code></li>
+<li><code>git add .</code></li>
+<li><code>git commit . -m "first commit"</code></li>
+<li><code>git branch -M main</code></li>
+<li><code>git remote add origin git@github.com:chenchen0324/django_deployment_example.git</code></li>
+<li><code>git push -u origin main --force</code></li>
+<li>SSH setup</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">$ cd <span class="token punctuation">.</span>ssh
+$ ls <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh
+
+＄ ssh<span class="token operator">-</span>keygen
+$ github　<span class="token comment">#任意の名前（今回はgithubのSSHKeyなのでgithubにしてます)</span>
+Enter passphrase <span class="token punctuation">(</span>empty <span class="token keyword">for</span> no passphrase<span class="token punctuation">)</span><span class="token punctuation">:</span> 　<span class="token comment">#エンター</span>
+Enter same passphrase again<span class="token punctuation">:</span>　　　　　　　　　　 <span class="token comment">#エンター</span>
+
+Your identification has been saved <span class="token keyword">in</span> <span class="token operator">/</span>Users<span class="token operator">/</span>yourname<span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>github<span class="token punctuation">.</span> <span class="token comment">#秘密鍵できた</span>
+Your public key has been saved <span class="token keyword">in</span> <span class="token operator">/</span>Users<span class="token operator">/</span>yourname<span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>github<span class="token punctuation">.</span>pub<span class="token punctuation">.</span> <span class="token comment">#公開鍵できた</span>
+
+＄ pbcopy <span class="token operator">&lt;</span> github_id_rsa<span class="token punctuation">.</span>pub
+
+<span class="token comment"># paste into github ssh</span>
+
+＄ sh <span class="token operator">-</span>T git@github<span class="token punctuation">.</span>com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -385,16 +449,12 @@ Configure">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/Django/">
+                                    <span class="chip bg-color">Django</span>
                                 </a>
                             
-                                <a href="/tags/Github/">
-                                    <span class="chip bg-color">Github</span>
-                                </a>
-                            
-                                <a href="/tags/Google-domain/">
-                                    <span class="chip bg-color">Google domain</span>
+                                <a href="/tags/EC/">
+                                    <span class="chip bg-color">EC</span>
                                 </a>
                             
                         </div>
@@ -473,9 +533,10 @@ Configure">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/05/19/ec-ec-website-chapter3-new-model-for-category-github-push/">
                     <div class="card-image">
@@ -492,9 +553,9 @@ Configure">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -503,6 +564,7 @@ Configure">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -525,12 +587,12 @@ Configure">
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/11/sql-get-started-with-sql/">
+                <a href="/2023/05/16/hexo-custom-domain/">
                     <div class="card-image">
                         
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305181855/SQL2.png" class="responsive-img" alt="SQL / Get Started with SQL">
+                        <img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/cover.jpeg" class="responsive-img" alt="Hexo / Custom Domain">
                         
-                        <span class="card-title">SQL / Get Started with SQL</span>
+                        <span class="card-title">Hexo / Custom Domain</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -541,7 +603,7 @@ Configure">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-16
                             </span>
                         <span class="publish-author">
                             
@@ -554,8 +616,16 @@ Configure">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL/">
-                        <span class="chip bg-color">SQL</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/Github/">
+                        <span class="chip bg-color">Github</span>
+                    </a>
+                    
+                    <a href="/tags/Google-domain/">
+                        <span class="chip bg-color">Google domain</span>
                     </a>
                     
                 </div>
