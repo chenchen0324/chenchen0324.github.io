@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-04-15T03:42:50.560Z</updated>
+  <updated>2023-05-16T06:56:33.000Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo / Custom Domain</title>
+    <link href="https://chenchen0324.github.io/2023/05/16/hexo-custom-domain/"/>
+    <id>https://chenchen0324.github.io/2023/05/16/hexo-custom-domain/</id>
+    <published>2023-05-16T00:25:00.000Z</published>
+    <updated>2023-05-16T06:56:33.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;Get your domain from google domains or Aliyun&lt;/li&gt;
+&lt;li&gt;Copy your domain and paste into Github Pages / Custom</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Hexo" scheme="https://chenchen0324.github.io/tags/Hexo/"/>
+    
+    <category term="Github" scheme="https://chenchen0324.github.io/tags/Github/"/>
+    
+    <category term="Google domain" scheme="https://chenchen0324.github.io/tags/Google-domain/"/>
+    
+  </entry>
   
   <entry>
     <title>SQL / Get Started with SQL</title>
