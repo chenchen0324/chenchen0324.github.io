@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-05-19T16:14:26.764Z</updated>
+  <updated>2023-05-22T08:05:30.444Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EC / EC Website Chapter4_New model for User</title>
+    <link href="https://chenchen0324.github.io/2023/05/22/ec-ec-website-chapter4-new-model-for-user/"/>
+    <id>https://chenchen0324.github.io/2023/05/22/ec-ec-website-chapter4-new-model-for-user/</id>
+    <published>2023-05-22T00:25:00.000Z</published>
+    <updated>2023-05-22T08:05:30.444Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;start app for accounts&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
   
   <entry>
     <title>EC / EC Website Chapter3_New model for category+Github push</title>

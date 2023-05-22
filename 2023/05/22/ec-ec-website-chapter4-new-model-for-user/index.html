@@ -4,17 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="EC / EC Website Chapter3_New model for category+Github push, chen&#39;s Blog">
+    <meta name="keywords" content="EC / EC Website Chapter4_New model for User, chen&#39;s Blog">
     <meta name="description" content="
-start new app for category
+start app for accounts
 
-python manage.py startapp category
+python manage.py startapp accounts
 
 
-update installed_apps
-
-#ec/ec/settings.py
-INSTALLED_AP">
+update installed apps in setting
+update models for account">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +24,7 @@ INSTALLED_AP">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>EC / EC Website Chapter3_New model for category+Github push | chen&#39;s Blog</title>
+    <title>EC / EC Website Chapter4_New model for User | chen&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -266,7 +264,7 @@ INSTALLED_AP">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">EC / EC Website Chapter3_New model for category+Github push</h1>
+                    <h1 class="description center-align post-title">EC / EC Website Chapter4_New model for User</h1>
                 </div>
             </div>
         </div>
@@ -310,7 +308,7 @@ INSTALLED_AP">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-05-19
+                    2023-05-22
                 </div>
                 
 
@@ -319,14 +317,14 @@ INSTALLED_AP">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    266
+                    335
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -350,92 +348,129 @@ INSTALLED_AP">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ol>
-<li>start new app for category</li>
+<li>start app for accounts</li>
 </ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py startapp category<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py startapp accounts<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ol start="2">
-<li>update installed_apps</li>
+<ol>
+<li>update installed apps in setting</li>
+<li>update models for accounts app</li>
 </ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#ec/ec/settings.py</span>
-INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token string">'django.contrib.admin'</span><span class="token punctuation">,</span>
-    <span class="token string">'django.contrib.auth'</span><span class="token punctuation">,</span>
-    <span class="token string">'django.contrib.contenttypes'</span><span class="token punctuation">,</span>
-    <span class="token string">'django.contrib.sessions'</span><span class="token punctuation">,</span>
-    <span class="token string">'django.contrib.messages'</span><span class="token punctuation">,</span>
-    <span class="token string">'django.contrib.staticfiles'</span><span class="token punctuation">,</span>
-    <span class="token string">'category'</span><span class="token punctuation">,</span>
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ol start="3">
-<li>Create model (database table) for category</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#ec/category/models.py</span>
-<span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib<span class="token punctuation">.</span>auth<span class="token punctuation">.</span>models <span class="token keyword">import</span> AbstractBaseUser<span class="token punctuation">,</span> BaseUserManager
 
 <span class="token comment"># Create your models here.</span>
-<span class="token keyword">class</span> <span class="token class-name">Category</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    category_name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-    slug <span class="token operator">=</span> models<span class="token punctuation">.</span>SlugField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-    description <span class="token operator">=</span> models<span class="token punctuation">.</span>TextField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">255</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-    cat_image <span class="token operator">=</span> models<span class="token punctuation">.</span>ImageField<span class="token punctuation">(</span>upload_to<span class="token operator">=</span><span class="token string">'photos/categories'</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-    <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
-        verbose_name <span class="token operator">=</span> <span class="token string">'category'</span>
-        verbose_name_plural <span class="token operator">=</span> <span class="token string">'categories'</span>
-    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> self<span class="token punctuation">.</span>category_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ol start="4">
-<li>add Category into admin</li>
+<span class="token keyword">class</span> <span class="token class-name">MyAccountManager</span><span class="token punctuation">(</span>BaseUserManager<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">create_user</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> first_name<span class="token punctuation">,</span> last_name<span class="token punctuation">,</span> username<span class="token punctuation">,</span> email<span class="token punctuation">,</span> password<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> email<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">'User must have an email address'</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> <span class="token keyword">not</span> username<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">'User must have an username'</span><span class="token punctuation">)</span>
+
+        user <span class="token operator">=</span> self<span class="token punctuation">.</span>model<span class="token punctuation">(</span>
+            email <span class="token operator">=</span> self<span class="token punctuation">.</span>normalize_email<span class="token punctuation">(</span>email<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            username <span class="token operator">=</span> username<span class="token punctuation">,</span>
+            first_name <span class="token operator">=</span> first_name<span class="token punctuation">,</span>
+            last_name <span class="token operator">=</span> last_name<span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+
+        user<span class="token punctuation">.</span>set_password<span class="token punctuation">(</span>password<span class="token punctuation">)</span>
+        user<span class="token punctuation">.</span>save<span class="token punctuation">(</span>using<span class="token operator">=</span>self<span class="token punctuation">.</span>_db<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> user
+
+    <span class="token keyword">def</span> <span class="token function">create_superuser</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> first_name<span class="token punctuation">,</span> last_name<span class="token punctuation">,</span> email<span class="token punctuation">,</span> username<span class="token punctuation">,</span> password<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        user <span class="token operator">=</span> self<span class="token punctuation">.</span>create_user<span class="token punctuation">(</span>
+            email <span class="token operator">=</span> self<span class="token punctuation">.</span>normalize_email<span class="token punctuation">(</span>email<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            username <span class="token operator">=</span> username<span class="token punctuation">,</span>
+            password <span class="token operator">=</span> password<span class="token punctuation">,</span>
+            first_name <span class="token operator">=</span> first_name<span class="token punctuation">,</span>
+            last_name <span class="token operator">=</span> last_name<span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+        user<span class="token punctuation">.</span>is_admin <span class="token operator">=</span> <span class="token boolean">True</span>
+        user<span class="token punctuation">.</span>is_active <span class="token operator">=</span> <span class="token boolean">True</span>
+        user<span class="token punctuation">.</span>is_staff <span class="token operator">=</span> <span class="token boolean">True</span>
+        user<span class="token punctuation">.</span>is_superadmin <span class="token operator">=</span> <span class="token boolean">True</span>
+        user<span class="token punctuation">.</span>save<span class="token punctuation">(</span>using<span class="token operator">=</span>self<span class="token punctuation">.</span>_db<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> user
+
+<span class="token keyword">class</span> <span class="token class-name">Account</span><span class="token punctuation">(</span>AbstractBaseUser<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    first_name      <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+    last_name       <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+    username        <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    email           <span class="token operator">=</span> models<span class="token punctuation">.</span>EmailField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    phone_number    <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># required</span>
+    date_joined     <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>auto_now_add<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    last_login      <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>auto_now_add<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    is_admin        <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    is_staff        <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    is_active        <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    is_superadmin        <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+
+    USERNAME_FIELD <span class="token operator">=</span> <span class="token string">'email'</span>
+    REQUIRED_FIELDS <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">,</span> <span class="token string">'first_name'</span><span class="token punctuation">,</span> <span class="token string">'last_name'</span><span class="token punctuation">]</span>
+
+    objects <span class="token operator">=</span> MyAccountManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">full_name</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>first_name<span class="token punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>last_name<span class="token punctuation">}</span></span><span class="token string">'</span></span>
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>email
+
+    <span class="token keyword">def</span> <span class="token function">has_perm</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> perm<span class="token punctuation">,</span> obj<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>is_admin
+
+    <span class="token keyword">def</span> <span class="token function">has_module_perms</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> add_label<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol>
+<li>Register account in admin.py</li>
 </ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#ec/category/admin.py</span>
-<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
-<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Category
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Account
 
 <span class="token comment"># Register your models here.</span>
 
-admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Category<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Account<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ol start="5">
-<li>Update the database</li>
+<ol>
+<li>update settings in ec</li>
 </ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py makemigrations
-python manage<span class="token punctuation">.</span>py migrate<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">AUTH_USER_MODEL <span class="token operator">=</span> <span class="token string">'accounts.Account'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ol start="6">
-<li>create admin for application</li>
+<ol>
+<li>delete previous database</li>
+<li>migrate database</li>
+<li>create a new super user</li>
 </ol>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py createsuperuser<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ol start="7">
-<li>check Category table in <a target="_blank" rel="noopener" href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a></li>
-<li>create a new repository</li>
-<li>git –version</li>
-<li><code>git init</code></li>
-<li><code>git add .</code></li>
-<li><code>git commit . -m "first commit"</code></li>
-<li><code>git branch -M main</code></li>
-<li><code>git remote add origin git@github.com:chenchen0324/django_deployment_example.git</code></li>
-<li><code>git push -u origin main --force</code></li>
-<li>SSH setup</li>
+<ol>
+<li>check admin module</li>
+<li>update the fields in admin module</li>
 </ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">$ cd <span class="token punctuation">.</span>ssh
-$ ls <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib<span class="token punctuation">.</span>auth<span class="token punctuation">.</span>admin <span class="token keyword">import</span> UserAdmin
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Account
 
-＄ ssh<span class="token operator">-</span>keygen
-$ github　<span class="token comment">#任意の名前（今回はgithubのSSHKeyなのでgithubにしてます)</span>
-Enter passphrase <span class="token punctuation">(</span>empty <span class="token keyword">for</span> no passphrase<span class="token punctuation">)</span><span class="token punctuation">:</span> 　<span class="token comment">#エンター</span>
-Enter same passphrase again<span class="token punctuation">:</span>　　　　　　　　　　 <span class="token comment">#エンター</span>
+<span class="token comment"># Register your models here.</span>
 
-Your identification has been saved <span class="token keyword">in</span> <span class="token operator">/</span>Users<span class="token operator">/</span>yourname<span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>github<span class="token punctuation">.</span> <span class="token comment">#秘密鍵できた</span>
-Your public key has been saved <span class="token keyword">in</span> <span class="token operator">/</span>Users<span class="token operator">/</span>yourname<span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>github<span class="token punctuation">.</span>pub<span class="token punctuation">.</span> <span class="token comment">#公開鍵できた</span>
+<span class="token keyword">class</span> <span class="token class-name">AccountAdmin</span><span class="token punctuation">(</span>UserAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    list_display <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'email'</span><span class="token punctuation">,</span> <span class="token string">'first_name'</span><span class="token punctuation">,</span> <span class="token string">'last_name'</span><span class="token punctuation">,</span> <span class="token string">'username'</span><span class="token punctuation">,</span> <span class="token string">'last_login'</span><span class="token punctuation">,</span> <span class="token string">'date_joined'</span><span class="token punctuation">,</span> <span class="token string">'is_active'</span><span class="token punctuation">)</span>
+    list_display_links <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'email'</span><span class="token punctuation">,</span> <span class="token string">'first_name'</span><span class="token punctuation">,</span> <span class="token string">'last_name'</span><span class="token punctuation">)</span>
+    readonly_fields <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'last_login'</span><span class="token punctuation">,</span> <span class="token string">'date_joined'</span><span class="token punctuation">)</span>
+    ordering <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'-date_joined'</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
 
-＄ pbcopy <span class="token operator">&lt;</span> github_id_rsa<span class="token punctuation">.</span>pub
+    filter_horizontal <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+    list_filter <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+    fieldsets <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-<span class="token comment"># paste into github ssh</span>
-
-＄ sh <span class="token operator">-</span>T git@github<span class="token punctuation">.</span>com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Account<span class="token punctuation">,</span> AccountAdmin<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -533,9 +568,10 @@ Your public key has been saved <span class="token keyword">in</span> <span class
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/05/22/ec-ec-website-chapter4-new-model-for-user/">
                     <div class="card-image">
@@ -552,9 +588,9 @@ Your public key has been saved <span class="token keyword">in</span> <span class
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -563,6 +599,7 @@ Your public key has been saved <span class="token keyword">in</span> <span class
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -585,12 +622,12 @@ Your public key has been saved <span class="token keyword">in</span> <span class
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/16/hexo-custom-domain/">
+                <a href="/2023/05/19/ec-ec-website-chapter3-new-model-for-category-github-push/">
                     <div class="card-image">
                         
-                        <img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/cover.jpeg" class="responsive-img" alt="Hexo / Custom Domain">
+                        <img src="https://www.openapp.ie/wp-content/uploads/2015/03/Django.png" class="responsive-img" alt="EC / EC Website Chapter3_New model for category+Github push">
                         
-                        <span class="card-title">Hexo / Custom Domain</span>
+                        <span class="card-title">EC / EC Website Chapter3_New model for category+Github push</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -601,7 +638,7 @@ Your public key has been saved <span class="token keyword">in</span> <span class
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-19
                             </span>
                         <span class="publish-author">
                             
@@ -614,16 +651,12 @@ Your public key has been saved <span class="token keyword">in</span> <span class
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/Django/">
+                        <span class="chip bg-color">Django</span>
                     </a>
                     
-                    <a href="/tags/Github/">
-                        <span class="chip bg-color">Github</span>
-                    </a>
-                    
-                    <a href="/tags/Google-domain/">
-                        <span class="chip bg-color">Google domain</span>
+                    <a href="/tags/EC/">
+                        <span class="chip bg-color">EC</span>
                     </a>
                     
                 </div>
