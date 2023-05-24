@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-05-22T08:05:30.444Z</updated>
+  <updated>2023-05-24T11:26:33.073Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -17,11 +17,70 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>EC / EC Website Chapter5_Configure Media File &amp; Add category</title>
+    <link href="https://chenchen0324.github.io/2023/05/24/ec-ec-website-chapter5-configure-media-file-add-category/"/>
+    <id>https://chenchen0324.github.io/2023/05/24/ec-ec-website-chapter5-configure-media-file-add-category/</id>
+    <published>2023-05-24T00:25:00.000Z</published>
+    <updated>2023-05-24T11:26:33.073Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;Configure media file to save pictures →&lt;/li&gt;
+&lt;li&gt;Configure media path in settings&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EC / EC Website Chapter6_Store App &amp; Product Model</title>
+    <link href="https://chenchen0324.github.io/2023/05/24/ec-ec-website-chapter6-store-app-product-model/"/>
+    <id>https://chenchen0324.github.io/2023/05/24/ec-ec-website-chapter6-store-app-product-model/</id>
+    <published>2023-05-24T00:25:00.000Z</published>
+    <updated>2023-05-24T11:27:42.547Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;start new app → “store”&lt;/li&gt;
+&lt;li&gt;update settings&lt;/li&gt;
+&lt;li&gt;write models.py&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>EC / EC Website Chapter4_New model for User</title>
     <link href="https://chenchen0324.github.io/2023/05/22/ec-ec-website-chapter4-new-model-for-user/"/>
     <id>https://chenchen0324.github.io/2023/05/22/ec-ec-website-chapter4-new-model-for-user/</id>
     <published>2023-05-22T00:25:00.000Z</published>
-    <updated>2023-05-22T08:05:30.444Z</updated>
+    <updated>2023-05-24T11:25:55.281Z</updated>
     
     
       
