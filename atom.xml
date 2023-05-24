@@ -160,6 +160,37 @@
   </entry>
   
   <entry>
+    <title>EC / EC Website Chapter1 Env Prepare</title>
+    <link href="https://chenchen0324.github.io/2023/04/07/ec-ec-website-chapter1-env-prepare/"/>
+    <id>https://chenchen0324.github.io/2023/04/07/ec-ec-website-chapter1-env-prepare/</id>
+    <published>2023-04-07T00:25:00.000Z</published>
+    <updated>2023-05-24T12:26:12.318Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Install atom, Git&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Install virtual env&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>EC2 / How to use EC2 to run Jupyter Notebook</title>
     <link href="https://chenchen0324.github.io/2023/03/25/ec2-how-to-use-ec2-to-run-jupyter-notebook/"/>
     <id>https://chenchen0324.github.io/2023/03/25/ec2-how-to-use-ec2-to-run-jupyter-notebook/</id>
@@ -186,6 +217,29 @@
     <category term="EC2" scheme="https://chenchen0324.github.io/tags/EC2/"/>
     
     <category term="Jupyter Notebook" scheme="https://chenchen0324.github.io/tags/Jupyter-Notebook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL / Get Started with SQL</title>
+    <link href="https://chenchen0324.github.io/2023/03/13/sql-get-started-with-sql/"/>
+    <id>https://chenchen0324.github.io/2023/03/13/sql-get-started-with-sql/</id>
+    <published>2023-03-13T00:25:00.000Z</published>
+    <updated>2023-05-24T12:26:45.440Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;sql&lt;/span&gt; oneline &lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="SQL" scheme="https://chenchen0324.github.io/tags/SQL/"/>
     
   </entry>
   
@@ -218,29 +272,6 @@
   </entry>
   
   <entry>
-    <title>SQL / Get Started with SQL</title>
-    <link href="https://chenchen0324.github.io/2023/03/11/sql-get-started-with-sql/"/>
-    <id>https://chenchen0324.github.io/2023/03/11/sql-get-started-with-sql/</id>
-    <published>2023-03-11T00:25:00.000Z</published>
-    <updated>2023-05-24T11:31:52.354Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;sql&lt;/span&gt; oneline &lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="SQL" scheme="https://chenchen0324.github.io/tags/SQL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>OpenAI / Chat API</title>
     <link href="https://chenchen0324.github.io/2023/03/10/openai-chat-api/"/>
     <id>https://chenchen0324.github.io/2023/03/10/openai-chat-api/</id>
@@ -268,42 +299,11 @@
   </entry>
   
   <entry>
-    <title>EC / EC Website Chapter1 Env Prepare</title>
-    <link href="https://chenchen0324.github.io/2023/03/05/ec-ec-website-chapter1-env-prepare/"/>
-    <id>https://chenchen0324.github.io/2023/03/05/ec-ec-website-chapter1-env-prepare/</id>
-    <published>2023-03-05T00:25:00.000Z</published>
-    <updated>2023-05-19T09:30:45.752Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Install atom, Git&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Install virtual env&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hexo / Custom Domain</title>
     <link href="https://chenchen0324.github.io/2023/02/25/hexo-custom-domain/"/>
     <id>https://chenchen0324.github.io/2023/02/25/hexo-custom-domain/</id>
     <published>2023-02-25T00:25:00.000Z</published>
-    <updated>2023-05-24T11:31:40.997Z</updated>
+    <updated>2023-05-24T12:28:43.161Z</updated>
     
     
       
