@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-05-24T11:26:33.073Z</updated>
+  <updated>2023-05-24T11:31:09.012Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EC / EC Website Chapter6_Store App &amp; Product Model</title>
+    <link href="https://chenchen0324.github.io/2023/05/25/ec-ec-website-chapter6-store-app-product-model/"/>
+    <id>https://chenchen0324.github.io/2023/05/25/ec-ec-website-chapter6-store-app-product-model/</id>
+    <published>2023-05-25T00:25:00.000Z</published>
+    <updated>2023-05-24T11:31:09.012Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;start new app → “store”&lt;/li&gt;
+&lt;li&gt;update settings&lt;/li&gt;
+&lt;li&gt;write models.py&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
   
   <entry>
     <title>EC / EC Website Chapter5_Configure Media File &amp; Add category</title>
@@ -33,36 +63,6 @@
 &lt;li&gt;Configure media path in settings&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&quot;line-numbers</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC / EC Website Chapter6_Store App &amp; Product Model</title>
-    <link href="https://chenchen0324.github.io/2023/05/24/ec-ec-website-chapter6-store-app-product-model/"/>
-    <id>https://chenchen0324.github.io/2023/05/24/ec-ec-website-chapter6-store-app-product-model/</id>
-    <published>2023-05-24T00:25:00.000Z</published>
-    <updated>2023-05-24T11:27:42.547Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;start new app → “store”&lt;/li&gt;
-&lt;li&gt;update settings&lt;/li&gt;
-&lt;li&gt;write models.py&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers language-python&quot;</summary>
         
       
     
@@ -128,58 +128,6 @@
     <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
     
     <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo / Custom Domain</title>
-    <link href="https://chenchen0324.github.io/2023/05/16/hexo-custom-domain/"/>
-    <id>https://chenchen0324.github.io/2023/05/16/hexo-custom-domain/</id>
-    <published>2023-05-16T00:25:00.000Z</published>
-    <updated>2023-05-19T13:17:47.371Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;Get your domain from google domains or Aliyun&lt;/li&gt;
-&lt;li&gt;Copy your domain and paste into Github Pages / Custom</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Hexo" scheme="https://chenchen0324.github.io/tags/Hexo/"/>
-    
-    <category term="Github" scheme="https://chenchen0324.github.io/tags/Github/"/>
-    
-    <category term="Google domain" scheme="https://chenchen0324.github.io/tags/Google-domain/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL / Get Started with SQL</title>
-    <link href="https://chenchen0324.github.io/2023/04/11/sql-get-started-with-sql/"/>
-    <id>https://chenchen0324.github.io/2023/04/11/sql-get-started-with-sql/</id>
-    <published>2023-04-11T00:25:00.000Z</published>
-    <updated>2023-04-15T03:42:50.560Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;sql&lt;/span&gt; oneline &lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="SQL" scheme="https://chenchen0324.github.io/tags/SQL/"/>
     
   </entry>
   
@@ -270,6 +218,29 @@
   </entry>
   
   <entry>
+    <title>SQL / Get Started with SQL</title>
+    <link href="https://chenchen0324.github.io/2023/03/11/sql-get-started-with-sql/"/>
+    <id>https://chenchen0324.github.io/2023/03/11/sql-get-started-with-sql/</id>
+    <published>2023-03-11T00:25:00.000Z</published>
+    <updated>2023-05-24T11:31:52.354Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;sql&lt;/span&gt; oneline &lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="SQL" scheme="https://chenchen0324.github.io/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>OpenAI / Chat API</title>
     <link href="https://chenchen0324.github.io/2023/03/10/openai-chat-api/"/>
     <id>https://chenchen0324.github.io/2023/03/10/openai-chat-api/</id>
@@ -324,6 +295,35 @@
     <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
     
     <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo / Custom Domain</title>
+    <link href="https://chenchen0324.github.io/2023/02/25/hexo-custom-domain/"/>
+    <id>https://chenchen0324.github.io/2023/02/25/hexo-custom-domain/</id>
+    <published>2023-02-25T00:25:00.000Z</published>
+    <updated>2023-05-24T11:31:40.997Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;Get your domain from google domains or Aliyun&lt;/li&gt;
+&lt;li&gt;Copy your domain and paste into Github Pages / Custom</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Hexo" scheme="https://chenchen0324.github.io/tags/Hexo/"/>
+    
+    <category term="Github" scheme="https://chenchen0324.github.io/tags/Github/"/>
+    
+    <category term="Google domain" scheme="https://chenchen0324.github.io/tags/Google-domain/"/>
     
   </entry>
   
