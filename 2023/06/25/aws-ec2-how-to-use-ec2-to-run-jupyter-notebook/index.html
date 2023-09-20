@@ -4,11 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo _ How to build your website with Hexo+Github Page+Google Domains, chen&#39;s Blog">
-    <meta name="description" content="[Hexo] How to build your website: Hexo+Github Page+Google DomainsEnvironment →
-1, Install Git
-2, Install Node.js
-3, $ np">
+    <meta name="keywords" content="AWS EC2 _ How to use EC2 to run Jupyter Notebook, chen&#39;s Blog">
+    <meta name="description" content="[AWS EC2] How to use EC2 to run Jupyter Notebook1, Launch an EC2 instance on the Amazon Linux machine.
+2, Connect to the">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo _ How to build your website with Hexo+Github Page+Google Domains | chen&#39;s Blog</title>
+    <title>AWS EC2 _ How to use EC2 to run Jupyter Notebook | chen&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -255,12 +253,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://uynguyen.github.io/Post-Resources/Hexo/Cover.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://jupyter.org/assets/share.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo _ How to build your website with Hexo+Github Page+Google Domains</h1>
+                    <h1 class="description center-align post-title">AWS EC2 _ How to use EC2 to run Jupyter Notebook</h1>
                 </div>
             </div>
         </div>
@@ -284,16 +282,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/AWS/">
+                                <span class="chip bg-color">AWS</span>
                             </a>
                         
-                            <a href="/tags/Github-Page/">
-                                <span class="chip bg-color">Github Page</span>
+                            <a href="/tags/EC2/">
+                                <span class="chip bg-color">EC2</span>
                             </a>
                         
-                            <a href="/tags/Google-Domains/">
-                                <span class="chip bg-color">Google Domains</span>
+                            <a href="/tags/Jupyter-Notebook/">
+                                <span class="chip bg-color">Jupyter Notebook</span>
                             </a>
                         
                     </div>
@@ -308,7 +306,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-05-24
+                    2023-06-25
                 </div>
                 
 
@@ -317,7 +315,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    272
+                    266
                 </div>
                 
 
@@ -347,55 +345,47 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Hexo-How-to-build-your-website-Hexo-Github-Page-Google-Domains"><a href="#Hexo-How-to-build-your-website-Hexo-Github-Page-Google-Domains" class="headerlink" title="[Hexo] How to build your website: Hexo+Github Page+Google Domains"></a>[Hexo] How to build your website: Hexo+Github Page+Google Domains</h1><p><strong>Environment →</strong></p>
-<p>1, Install Git</p>
-<p>2, Install Node.js</p>
-<p>3, <code>$ npm install -g hexo-cli</code></p>
-<p><strong>Get Started →</strong></p>
-<p>1, <code>$ hexo init {{folder}}</code></p>
-<p>2, <code>$ hexo server</code></p>
-<p><strong>Theme →</strong></p>
-<p>1, <code>$ git clone [https://github.com/blinkfox/hexo-theme-matery.git](https://github.com/blinkfox/hexo-theme-matery.git)</code></p>
-<p>2, Copy the&nbsp;<code>hexo-theme-matery</code> folder to your&nbsp;<code>themes</code>folder of your Hexo blog project.</p>
-<p>3, Modify the&nbsp;<code>_config.yml</code>of Hexo’s root folder → <code>theme: hexo-theme-matery</code></p>
-<p>4, <code>$ hexo server -p 4001</code></p>
-<p><strong>Deploy →</strong></p>
-<p>1, Create a public repository in GitHub which name is +”.github.io”</p>
-<p>2, Update <code>_config.yml</code></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">deploy<span class="token punctuation">:</span>
-  <span class="token builtin">type</span><span class="token punctuation">:</span> git
-  repo<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>SSH of your repository<span class="token punctuation">}</span><span class="token punctuation">}</span>
-  branch<span class="token punctuation">:</span> main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="AWS-EC2-How-to-use-EC2-to-run-Jupyter-Notebook"><a href="#AWS-EC2-How-to-use-EC2-to-run-Jupyter-Notebook" class="headerlink" title="[AWS EC2] How to use EC2 to run Jupyter Notebook"></a>[AWS EC2] How to use EC2 to run Jupyter Notebook</h1><p>1, Launch an EC2 instance on the Amazon Linux machine.</p>
+<p>2, Connect to the instance via SSH</p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token number">1.</span> Open a terminal or command prompt on your local machine<span class="token punctuation">.</span>
+<span class="token number">2.</span> Locate your <span class="token keyword">private</span> key <span class="token function">file</span> <span class="token punctuation">(</span><span class="token punctuation">.</span>pem<span class="token punctuation">)</span> that you have created or downloaded when you launched your <span class="token constant">EC2</span> instance<span class="token punctuation">.</span>
+    
+    <span class="token literal-property property">Note</span><span class="token operator">:</span> If you don't have a key pair<span class="token punctuation">,</span> you can create a <span class="token keyword">new</span> <span class="token class-name">one</span> <span class="token keyword">in</span> the <span class="token constant">EC2</span> console<span class="token punctuation">.</span>
+    
+<span class="token number">3.</span> Change the permission <span class="token keyword">of</span> the key pair file using the command<span class="token operator">:</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>chmod 400 /path/to/your/key.pem</p>
+<pre class="line-numbers language-none"><code class="language-none">
+4. Connect to your EC2 instance using the command:
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>ssh -i /path/to/your/key.pem ec2-user@your_ec2_instance_public_ip</p>
+<pre class="line-numbers language-none"><code class="language-none">```
 
-<p>3, <code>$ hexo generate</code></p>
-<p>4, <code>$ hexo deploy</code></p>
-<p><strong>SSH connect issue →</strong> </p>
-<p><img src="https://s3.bmp.ovh/imgs/2023/02/17/75b69c4c97402fc4.png"></p>
-<p><strong>Customize your website →</strong></p>
-<p>1, create page for each tab</p>
-<p>2, Also, create a new&nbsp;<code>_data</code>directory in your blog’s&nbsp;<code>source</code>directory and a new&nbsp;<code>friends.json</code>file in the&nbsp;<code>_data</code>directory. The contents of the file is as follows:</p>
-<p>3, Configure the name of the basic menu navigation, path url and icon icon.</p>
-<p>4, Secondary menu configuration method (optional)</p>
-<p>5, check Search function</p>
-<p>6, Translate Chinese Link to Pinyin</p>
-<p>7, Post word count statistics plugin (Recommended)</p>
-<p>8, Add emoji support (Optional)</p>
-<p>9, Modify website footer</p>
-<p>10, Modify social links</p>
-<p>11, Post Front-matter</p>
-<p>12, Go through config.yml</p>
-<p><strong>Google Domains →</strong></p>
-<p>1, Get your domain from google domains or Aliyun</p>
-<p>2, Copy your domain and paste into Github Pages / Custom domain</p>
-<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Copy+your+domain+and+paste+into+Github+Pages+%3A+Custom+domain.png"></p>
-<p>3, Configure Github Page DNS for your domain</p>
-<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Configure+Github+Page+DNS+for+your+domain.png"></p>
-<p>4, Create a CNAME for <a target="_blank" rel="noopener" href="http://www.yourdomain/">www.yourdomain</a></p>
-<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Create+a+CNAME+for+www.yourdomain.png"></p>
-<p>5, Add a verified domain</p>
-<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Add+a+verified+domain.png"></p>
-<p>6, Add a DNS txt record</p>
-<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Add+a+DNS+txt+record.png"></p>
+3, Update the package list by running the command:
+
+```json
+sudo yum update -y<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4, Install pip and python3 by running the command:</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">sudo yum install python3-pip -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>5, Install Jupyter Notebook by running the command:</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">pip3 install jupyter<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>6, Generate the Jupyter configuration file by running the command:</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">jupyter notebook --generate-config<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>7, Set a password for Jupyter Notebook by running the command:</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">jupyter notebook password<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>8, Create a new SSL certificate by running the command:</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">openssl req -x509 -nodes -days <span class="token number">365</span> -newkey rsa<span class="token operator">:</span><span class="token number">2048</span> -keyout mykey.key -out mycert.pem<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>9, Start the Jupyter Notebook server by running the command:</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">jupyter notebook --ip=<span class="token number">0.0</span>.<span class="token number">0.0</span> --port=<span class="token number">8888</span> --no-browser --certfile=mycert.pem --keyfile=mykey.key<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>10, Open your web browser and access the Jupyter Notebook by entering the URL <strong><code>https://&lt;your_ec2_instance_public_ip&gt;:8888</code></strong>.</p>
+<p>11, <strong><strong>How to add a new key pair to your existing AWS EC2 Instances</strong></strong> <a target="_blank" rel="noopener" href="https://linux.how2shout.com/add-a-new-key-pair-to-your-exisitng-aws-ec2-instances/"></a></p>
 
                 
             </div>
@@ -410,16 +400,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/AWS/">
+                                    <span class="chip bg-color">AWS</span>
                                 </a>
                             
-                                <a href="/tags/Github-Page/">
-                                    <span class="chip bg-color">Github Page</span>
+                                <a href="/tags/EC2/">
+                                    <span class="chip bg-color">EC2</span>
                                 </a>
                             
-                                <a href="/tags/Google-Domains/">
-                                    <span class="chip bg-color">Google Domains</span>
+                                <a href="/tags/Jupyter-Notebook/">
+                                    <span class="chip bg-color">Jupyter Notebook</span>
                                 </a>
                             
                         </div>
@@ -502,12 +492,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/06/07/github-bash-git/">
+                <a href="/2023/07/07/ec1-env-config-path-homepage-category-app/">
                     <div class="card-image">
                         
-                        <img src="https://www.freecodecamp.org/news/content/images/2022/07/git-github.png" class="responsive-img" alt="GitHub _ Bash + Git">
+                        <img src="https://www.openapp.ie/wp-content/uploads/2015/03/Django.png" class="responsive-img" alt="EC1 _ Env + Config Path + Homepage + Category App">
                         
-                        <span class="card-title">GitHub _ Bash + Git</span>
+                        <span class="card-title">EC1 _ Env + Config Path + Homepage + Category App</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -518,7 +508,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-07
                         </span>
                         <span class="publish-author">
                             
@@ -531,16 +521,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Bash/">
-                        <span class="chip bg-color">Bash</span>
+                    <a href="/tags/Django/">
+                        <span class="chip bg-color">Django</span>
                     </a>
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
-                    </a>
-                    
-                    <a href="/tags/GitHub/">
-                        <span class="chip bg-color">GitHub</span>
+                    <a href="/tags/EC/">
+                        <span class="chip bg-color">EC</span>
                     </a>
                     
                 </div>
@@ -551,15 +537,15 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/24/hexo-how-to-build-your-website-hexo-github-page/">
+                <a href="/2023/06/13/sql-get-started-with-sql/">
                     <div class="card-image">
                         
-                        <img src="https://uynguyen.github.io/Post-Resources/Hexo/Cover.png" class="responsive-img" alt="Hexo _ How to build your website with Hexo+Github Page+Google Domains">
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305181855/SQL2.png" class="responsive-img" alt="SQL _ Get Started with SQL">
                         
-                        <span class="card-title">Hexo _ How to build your website with Hexo+Github Page+Google Domains</span>
+                        <span class="card-title">SQL _ Get Started with SQL</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -570,7 +556,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-13
                             </span>
                         <span class="publish-author">
                             
@@ -580,20 +566,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/Github-Page/">
-                        <span class="chip bg-color">Github Page</span>
-                    </a>
-                    
-                    <a href="/tags/Google-Domains/">
-                        <span class="chip bg-color">Google Domains</span>
+                    <a href="/tags/SQL/">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
                 </div>
