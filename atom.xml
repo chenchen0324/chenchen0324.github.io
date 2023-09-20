@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-05-24T11:31:09.012Z</updated>
+  <updated>2023-09-08T15:55:12.733Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -17,302 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>EC / EC Website Chapter6_Store App &amp; Product Model</title>
-    <link href="https://chenchen0324.github.io/2023/05/25/ec-ec-website-chapter6-store-app-product-model/"/>
-    <id>https://chenchen0324.github.io/2023/05/25/ec-ec-website-chapter6-store-app-product-model/</id>
-    <published>2023-05-25T00:25:00.000Z</published>
-    <updated>2023-05-24T11:31:09.012Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;start new app → “store”&lt;/li&gt;
-&lt;li&gt;update settings&lt;/li&gt;
-&lt;li&gt;write models.py&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC / EC Website Chapter5_Configure Media File &amp; Add category</title>
-    <link href="https://chenchen0324.github.io/2023/05/24/ec-ec-website-chapter5-configure-media-file-add-category/"/>
-    <id>https://chenchen0324.github.io/2023/05/24/ec-ec-website-chapter5-configure-media-file-add-category/</id>
+    <title>Hexo</title>
+    <link href="https://chenchen0324.github.io/2023/05/24/hexo-how-to-build-your-website-hexo-github-page/"/>
+    <id>https://chenchen0324.github.io/2023/05/24/hexo-how-to-build-your-website-hexo-github-page/</id>
     <published>2023-05-24T00:25:00.000Z</published>
-    <updated>2023-05-24T11:26:33.073Z</updated>
+    <updated>2023-09-08T15:55:12.733Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;Configure media file to save pictures →&lt;/li&gt;
-&lt;li&gt;Configure media path in settings&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC / EC Website Chapter4_New model for User</title>
-    <link href="https://chenchen0324.github.io/2023/05/22/ec-ec-website-chapter4-new-model-for-user/"/>
-    <id>https://chenchen0324.github.io/2023/05/22/ec-ec-website-chapter4-new-model-for-user/</id>
-    <published>2023-05-22T00:25:00.000Z</published>
-    <updated>2023-05-24T11:25:55.281Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;start app for accounts&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC / EC Website Chapter3_New model for category+Github push</title>
-    <link href="https://chenchen0324.github.io/2023/05/19/ec-ec-website-chapter3-new-model-for-category-github-push/"/>
-    <id>https://chenchen0324.github.io/2023/05/19/ec-ec-website-chapter3-new-model-for-category-github-push/</id>
-    <published>2023-05-19T00:25:00.000Z</published>
-    <updated>2023-05-19T16:14:26.764Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;start new app for category&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC / EC Website Chapter2 Url+Http+Template</title>
-    <link href="https://chenchen0324.github.io/2023/04/08/ec-ec-website-chapter2-url-http-template/"/>
-    <id>https://chenchen0324.github.io/2023/04/08/ec-ec-website-chapter2-url-http-template/</id>
-    <published>2023-04-08T00:25:00.000Z</published>
-    <updated>2023-04-07T17:35:32.967Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;add url for homepage&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC / EC Website Chapter1 Env Prepare</title>
-    <link href="https://chenchen0324.github.io/2023/04/07/ec-ec-website-chapter1-env-prepare/"/>
-    <id>https://chenchen0324.github.io/2023/04/07/ec-ec-website-chapter1-env-prepare/</id>
-    <published>2023-04-07T00:25:00.000Z</published>
-    <updated>2023-05-24T12:26:12.318Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Install atom, Git&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Install virtual env&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers language-python&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC2 / How to use EC2 to run Jupyter Notebook</title>
-    <link href="https://chenchen0324.github.io/2023/03/25/ec2-how-to-use-ec2-to-run-jupyter-notebook/"/>
-    <id>https://chenchen0324.github.io/2023/03/25/ec2-how-to-use-ec2-to-run-jupyter-notebook/</id>
-    <published>2023-03-25T00:25:00.000Z</published>
-    <updated>2023-04-07T17:36:22.740Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Launch an EC2 instance on the Amazon Linux machine.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Connect to the instance via</summary>
-        
-      
-    
-    
-    
-    
-    <category term="AWS" scheme="https://chenchen0324.github.io/tags/AWS/"/>
-    
-    <category term="EC2" scheme="https://chenchen0324.github.io/tags/EC2/"/>
-    
-    <category term="Jupyter Notebook" scheme="https://chenchen0324.github.io/tags/Jupyter-Notebook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL / Get Started with SQL</title>
-    <link href="https://chenchen0324.github.io/2023/03/13/sql-get-started-with-sql/"/>
-    <id>https://chenchen0324.github.io/2023/03/13/sql-get-started-with-sql/</id>
-    <published>2023-03-13T00:25:00.000Z</published>
-    <updated>2023-05-24T12:26:45.440Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;sql&lt;/span&gt; oneline &lt;span</summary>
-        
-      
-    
-    
-    
-    
-    <category term="SQL" scheme="https://chenchen0324.github.io/tags/SQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenAI / FineTune</title>
-    <link href="https://chenchen0324.github.io/2023/03/11/openai-finetune/"/>
-    <id>https://chenchen0324.github.io/2023/03/11/openai-finetune/</id>
-    <published>2023-03-11T00:25:00.000Z</published>
-    <updated>2023-04-07T17:37:30.853Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;Prepare Training Data &lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    
-    <category term="OpenAI" scheme="https://chenchen0324.github.io/tags/OpenAI/"/>
-    
-    <category term="FineTune" scheme="https://chenchen0324.github.io/tags/FineTune/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenAI / Chat API</title>
-    <link href="https://chenchen0324.github.io/2023/03/10/openai-chat-api/"/>
-    <id>https://chenchen0324.github.io/2023/03/10/openai-chat-api/</id>
-    <published>2023-03-10T00:25:00.000Z</published>
-    <updated>2023-04-07T17:37:15.241Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# without</summary>
-        
-      
-    
-    
-    
-    <category term="Assistant" scheme="https://chenchen0324.github.io/categories/Assistant/"/>
-    
-    
-    <category term="OpenAI" scheme="https://chenchen0324.github.io/tags/OpenAI/"/>
-    
-    <category term="ChatGPT" scheme="https://chenchen0324.github.io/tags/ChatGPT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo / Custom Domain</title>
-    <link href="https://chenchen0324.github.io/2023/02/25/hexo-custom-domain/"/>
-    <id>https://chenchen0324.github.io/2023/02/25/hexo-custom-domain/</id>
-    <published>2023-02-25T00:25:00.000Z</published>
-    <updated>2023-05-24T12:28:43.161Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;Get your domain from google domains or Aliyun&lt;/li&gt;
-&lt;li&gt;Copy your domain and paste into Github Pages / Custom</summary>
+    <summary type="html">&lt;h1 id=&quot;Hexo-How-to-build-your-website-Hexo-Github-Page-Google-Domains&quot;&gt;&lt;a</summary>
         
       
     
@@ -321,43 +37,9 @@
     
     <category term="Hexo" scheme="https://chenchen0324.github.io/tags/Hexo/"/>
     
-    <category term="Github" scheme="https://chenchen0324.github.io/tags/Github/"/>
+    <category term="Github Page" scheme="https://chenchen0324.github.io/tags/Github-Page/"/>
     
-    <category term="Google domain" scheme="https://chenchen0324.github.io/tags/Google-domain/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo / How to build your website with Hexo+Github Page</title>
-    <link href="https://chenchen0324.github.io/2023/02/24/hexo-how-to-build-your-website-with-hexo-github-page/"/>
-    <id>https://chenchen0324.github.io/2023/02/24/hexo-how-to-build-your-website-with-hexo-github-page/</id>
-    <published>2023-02-24T00:25:00.000Z</published>
-    <updated>2023-04-07T17:36:59.121Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;Environment&lt;ol&gt;
-&lt;li&gt;Install Git&lt;/li&gt;
-&lt;li&gt;Install Node.js&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;$ npm install -g hexo-cli&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;Get</summary>
-        
-      
-    
-    
-    
-    <category term="Website" scheme="https://chenchen0324.github.io/categories/Website/"/>
-    
-    
-    <category term="Hexo" scheme="https://chenchen0324.github.io/tags/Hexo/"/>
-    
-    <category term="Github" scheme="https://chenchen0324.github.io/tags/Github/"/>
+    <category term="Google Domains" scheme="https://chenchen0324.github.io/tags/Google-Domains/"/>
     
   </entry>
   

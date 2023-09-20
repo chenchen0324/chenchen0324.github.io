@@ -4,15 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="EC / EC Website Chapter4_New model for User, chen&#39;s Blog">
-    <meta name="description" content="
-start app for accounts
-
-python manage.py startapp accounts
-
-
-update installed apps in setting
-update models for account">
+    <meta name="keywords" content="Hexo, chen&#39;s Blog">
+    <meta name="description" content="[Hexo] How to build your website: Hexo+Github Page+Google DomainsEnvironment →
+1, Install Git
+2, Install Node.js
+3, $ np">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +20,7 @@ update models for account">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>EC / EC Website Chapter4_New model for User | chen&#39;s Blog</title>
+    <title>Hexo | chen&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -59,9 +55,9 @@ update models for account">
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="chen's Blog" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="chen's Blog" type="application/atom+xml">
 </head>
 
 
@@ -259,12 +255,12 @@ update models for account">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.openapp.ie/wp-content/uploads/2015/03/Django.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://uynguyen.github.io/Post-Resources/Hexo/Cover.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">EC / EC Website Chapter4_New model for User</h1>
+                    <h1 class="description center-align post-title">Hexo</h1>
                 </div>
             </div>
         </div>
@@ -288,12 +284,16 @@ update models for account">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Django/">
-                                <span class="chip bg-color">Django</span>
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
                             </a>
                         
-                            <a href="/tags/EC/">
-                                <span class="chip bg-color">EC</span>
+                            <a href="/tags/Github-Page/">
+                                <span class="chip bg-color">Github Page</span>
+                            </a>
+                        
+                            <a href="/tags/Google-Domains/">
+                                <span class="chip bg-color">Google Domains</span>
                             </a>
                         
                     </div>
@@ -308,7 +308,7 @@ update models for account">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-05-22
+                    2023-05-24
                 </div>
                 
 
@@ -317,14 +317,14 @@ update models for account">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    335
+                    272
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    2 Min
+                    1 Min
                 </div>
                 
 
@@ -347,130 +347,56 @@ update models for account">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li>start app for accounts</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py startapp accounts<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="Hexo-How-to-build-your-website-Hexo-Github-Page-Google-Domains"><a href="#Hexo-How-to-build-your-website-Hexo-Github-Page-Google-Domains" class="headerlink" title="[Hexo] How to build your website: Hexo+Github Page+Google Domains"></a>[Hexo] How to build your website: Hexo+Github Page+Google Domains</h1><p><strong>Environment →</strong></p>
+<p>1, Install Git</p>
+<p>2, Install Node.js</p>
+<p>3, <code>$ npm install -g hexo-cli</code></p>
+<p><strong>Get Started →</strong></p>
+<p>1, <code>$ hexo init {{folder}}</code></p>
+<p>2, <code>$ hexo server</code></p>
+<p><strong>Theme →</strong></p>
+<p>1, <code>$ git clone [https://github.com/blinkfox/hexo-theme-matery.git](https://github.com/blinkfox/hexo-theme-matery.git)</code></p>
+<p>2, Copy the&nbsp;<code>hexo-theme-matery</code> folder to your&nbsp;<code>themes</code>folder of your Hexo blog project.</p>
+<p>3, Modify the&nbsp;<code>_config.yml</code>of Hexo’s root folder → <code>theme: hexo-theme-matery</code></p>
+<p>4, <code>$ hexo server -p 4001</code></p>
+<p><strong>Deploy →</strong></p>
+<p>1, Create a public repository in GitHub which name is +”.github.io”</p>
+<p>2, Update <code>_config.yml</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">deploy<span class="token punctuation">:</span>
+  <span class="token builtin">type</span><span class="token punctuation">:</span> git
+  repo<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>SSH of your repository<span class="token punctuation">}</span><span class="token punctuation">}</span>
+  branch<span class="token punctuation">:</span> main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ol start="2">
-<li>update installed apps in setting</li>
-<li>update models for accounts app</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
-<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib<span class="token punctuation">.</span>auth<span class="token punctuation">.</span>models <span class="token keyword">import</span> AbstractBaseUser<span class="token punctuation">,</span> BaseUserManager
+<p>3, <code>$ hexo generate</code></p>
+<p>4, <code>$ hexo deploy</code></p>
+<p><strong>SSH connect issue →</strong> </p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/02/17/75b69c4c97402fc4.png" alt="https://s3.bmp.ovh/imgs/2023/02/17/75b69c4c97402fc4.png"></p>
+<p><strong>Customize your website →</strong></p>
+<p>1, create page for each tab</p>
+<p>2, Also, create a new&nbsp;<code>_data</code>directory in your blog’s&nbsp;<code>source</code>directory and a new&nbsp;<code>friends.json</code>file in the&nbsp;<code>_data</code>directory. The contents of the file is as follows:</p>
+<p>3, Configure the name of the basic menu navigation, path url and icon icon.</p>
+<p>4, Secondary menu configuration method (optional)</p>
+<p>5, check Search function</p>
+<p>6, Translate Chinese Link to Pinyin</p>
+<p>7, Post word count statistics plugin (Recommended)</p>
+<p>8, Add emoji support (Optional)</p>
+<p>9, Modify website footer</p>
+<p>10, Modify social links</p>
+<p>11, Post Front-matter</p>
+<p>12, Go through config.yml</p>
+<p><strong>Google Domains →</strong></p>
+<p>1, Get your domain from google domains or Aliyun</p>
+<p>2, Copy your domain and paste into Github Pages / Custom domain</p>
+<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Copy+your+domain+and+paste+into+Github+Pages+%3A+Custom+domain.png" alt="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Copy+your+domain+and+paste+into+Github+Pages+%3A+Custom+domain.png"></p>
+<p>3, Configure Github Page DNS for your domain</p>
+<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Configure+Github+Page+DNS+for+your+domain.png" alt="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Configure+Github+Page+DNS+for+your+domain.png"></p>
+<p>4, Create a CNAME for <a target="_blank" rel="noopener" href="http://www.yourdomain/">www.yourdomain</a></p>
+<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Create+a+CNAME+for+www.yourdomain.png" alt="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Create+a+CNAME+for+www.yourdomain.png"></p>
+<p>5, Add a verified domain</p>
+<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Add+a+verified+domain.png" alt="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Add+a+verified+domain.png"></p>
+<p>6, Add a DNS txt record</p>
+<p><img src="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Add+a+DNS+txt+record.png" alt="https://chenblogbucket.s3.ap-northeast-1.amazonaws.com/%5BHexo%5D+Custom+Domain/Add+a+DNS+txt+record.png"></p>
 
-<span class="token comment"># Create your models here.</span>
-
-<span class="token keyword">class</span> <span class="token class-name">MyAccountManager</span><span class="token punctuation">(</span>BaseUserManager<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">create_user</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> first_name<span class="token punctuation">,</span> last_name<span class="token punctuation">,</span> username<span class="token punctuation">,</span> email<span class="token punctuation">,</span> password<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">if</span> <span class="token keyword">not</span> email<span class="token punctuation">:</span>
-            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">'User must have an email address'</span><span class="token punctuation">)</span>
-
-        <span class="token keyword">if</span> <span class="token keyword">not</span> username<span class="token punctuation">:</span>
-            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">'User must have an username'</span><span class="token punctuation">)</span>
-
-        user <span class="token operator">=</span> self<span class="token punctuation">.</span>model<span class="token punctuation">(</span>
-            email <span class="token operator">=</span> self<span class="token punctuation">.</span>normalize_email<span class="token punctuation">(</span>email<span class="token punctuation">)</span><span class="token punctuation">,</span>
-            username <span class="token operator">=</span> username<span class="token punctuation">,</span>
-            first_name <span class="token operator">=</span> first_name<span class="token punctuation">,</span>
-            last_name <span class="token operator">=</span> last_name<span class="token punctuation">,</span>
-        <span class="token punctuation">)</span>
-
-        user<span class="token punctuation">.</span>set_password<span class="token punctuation">(</span>password<span class="token punctuation">)</span>
-        user<span class="token punctuation">.</span>save<span class="token punctuation">(</span>using<span class="token operator">=</span>self<span class="token punctuation">.</span>_db<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> user
-
-    <span class="token keyword">def</span> <span class="token function">create_superuser</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> first_name<span class="token punctuation">,</span> last_name<span class="token punctuation">,</span> email<span class="token punctuation">,</span> username<span class="token punctuation">,</span> password<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        user <span class="token operator">=</span> self<span class="token punctuation">.</span>create_user<span class="token punctuation">(</span>
-            email <span class="token operator">=</span> self<span class="token punctuation">.</span>normalize_email<span class="token punctuation">(</span>email<span class="token punctuation">)</span><span class="token punctuation">,</span>
-            username <span class="token operator">=</span> username<span class="token punctuation">,</span>
-            password <span class="token operator">=</span> password<span class="token punctuation">,</span>
-            first_name <span class="token operator">=</span> first_name<span class="token punctuation">,</span>
-            last_name <span class="token operator">=</span> last_name<span class="token punctuation">,</span>
-        <span class="token punctuation">)</span>
-        user<span class="token punctuation">.</span>is_admin <span class="token operator">=</span> <span class="token boolean">True</span>
-        user<span class="token punctuation">.</span>is_active <span class="token operator">=</span> <span class="token boolean">True</span>
-        user<span class="token punctuation">.</span>is_staff <span class="token operator">=</span> <span class="token boolean">True</span>
-        user<span class="token punctuation">.</span>is_superadmin <span class="token operator">=</span> <span class="token boolean">True</span>
-        user<span class="token punctuation">.</span>save<span class="token punctuation">(</span>using<span class="token operator">=</span>self<span class="token punctuation">.</span>_db<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> user
-
-<span class="token keyword">class</span> <span class="token class-name">Account</span><span class="token punctuation">(</span>AbstractBaseUser<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    first_name      <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
-    last_name       <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
-    username        <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-    email           <span class="token operator">=</span> models<span class="token punctuation">.</span>EmailField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-    phone_number    <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">)</span>
-
-    <span class="token comment"># required</span>
-    date_joined     <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>auto_now_add<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-    last_login      <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>auto_now_add<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-    is_admin        <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-    is_staff        <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-    is_active        <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-    is_superadmin        <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-
-    USERNAME_FIELD <span class="token operator">=</span> <span class="token string">'email'</span>
-    REQUIRED_FIELDS <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">,</span> <span class="token string">'first_name'</span><span class="token punctuation">,</span> <span class="token string">'last_name'</span><span class="token punctuation">]</span>
-
-    objects <span class="token operator">=</span> MyAccountManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-    <span class="token keyword">def</span> <span class="token function">full_name</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>first_name<span class="token punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>last_name<span class="token punctuation">}</span></span><span class="token string">'</span></span>
-
-    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> self<span class="token punctuation">.</span>email
-
-    <span class="token keyword">def</span> <span class="token function">has_perm</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> perm<span class="token punctuation">,</span> obj<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> self<span class="token punctuation">.</span>is_admin
-
-    <span class="token keyword">def</span> <span class="token function">has_module_perms</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> add_label<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token boolean">True</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ol start="4">
-<li>Register account in admin.py</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
-
-<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Account
-
-<span class="token comment"># Register your models here.</span>
-
-admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Account<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ol start="5">
-<li>update settings in ec</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">AUTH_USER_MODEL <span class="token operator">=</span> <span class="token string">'accounts.Account'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ol start="6">
-<li>delete previous database</li>
-<li>migrate database</li>
-<li>create a new super user</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py createsuperuser<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ol start="9">
-<li>check admin module</li>
-<li>update the fields in admin module</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
-<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib<span class="token punctuation">.</span>auth<span class="token punctuation">.</span>admin <span class="token keyword">import</span> UserAdmin
-<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Account
-
-<span class="token comment"># Register your models here.</span>
-
-<span class="token keyword">class</span> <span class="token class-name">AccountAdmin</span><span class="token punctuation">(</span>UserAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    list_display <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'email'</span><span class="token punctuation">,</span> <span class="token string">'first_name'</span><span class="token punctuation">,</span> <span class="token string">'last_name'</span><span class="token punctuation">,</span> <span class="token string">'username'</span><span class="token punctuation">,</span> <span class="token string">'last_login'</span><span class="token punctuation">,</span> <span class="token string">'date_joined'</span><span class="token punctuation">,</span> <span class="token string">'is_active'</span><span class="token punctuation">)</span>
-    list_display_links <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'email'</span><span class="token punctuation">,</span> <span class="token string">'first_name'</span><span class="token punctuation">,</span> <span class="token string">'last_name'</span><span class="token punctuation">)</span>
-    readonly_fields <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'last_login'</span><span class="token punctuation">,</span> <span class="token string">'date_joined'</span><span class="token punctuation">)</span>
-    ordering <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'-date_joined'</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
-
-    filter_horizontal <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
-    list_filter <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
-    fieldsets <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Account<span class="token punctuation">,</span> AccountAdmin<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -484,12 +410,16 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Django/">
-                                    <span class="chip bg-color">Django</span>
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
                                 </a>
                             
-                                <a href="/tags/EC/">
-                                    <span class="chip bg-color">EC</span>
+                                <a href="/tags/Github-Page/">
+                                    <span class="chip bg-color">Github Page</span>
+                                </a>
+                            
+                                <a href="/tags/Google-Domains/">
+                                    <span class="chip bg-color">Google Domains</span>
                                 </a>
                             
                         </div>
@@ -568,64 +498,17 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
-            <div class="card">
-                <a href="/2023/05/24/ec-ec-website-chapter5-configure-media-file-add-category/">
-                    <div class="card-image">
-                        
-                        <img src="https://www.openapp.ie/wp-content/uploads/2015/03/Django.png" class="responsive-img" alt="EC / EC Website Chapter5_Configure Media File &amp; Add category">
-                        
-                        <span class="card-title">EC / EC Website Chapter5_Configure Media File &amp; Add category</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-24
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            CHEN CHEN
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Django/">
-                        <span class="chip bg-color">Django</span>
-                    </a>
-                    
-                    <a href="/tags/EC/">
-                        <span class="chip bg-color">EC</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2023/05/19/ec-ec-website-chapter3-new-model-for-category-github-push/">
+                <a href="/2023/05/24/hexo-how-to-build-your-website-hexo-github-page/">
                     <div class="card-image">
                         
-                        <img src="https://www.openapp.ie/wp-content/uploads/2015/03/Django.png" class="responsive-img" alt="EC / EC Website Chapter3_New model for category+Github push">
+                        <img src="https://uynguyen.github.io/Post-Resources/Hexo/Cover.png" class="responsive-img" alt="Hexo">
                         
-                        <span class="card-title">EC / EC Website Chapter3_New model for category+Github push</span>
+                        <span class="card-title">Hexo</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -636,7 +519,7 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-24
                             </span>
                         <span class="publish-author">
                             
@@ -646,15 +529,73 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Django/">
-                        <span class="chip bg-color">Django</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
-                    <a href="/tags/EC/">
-                        <span class="chip bg-color">EC</span>
+                    <a href="/tags/Github-Page/">
+                        <span class="chip bg-color">Github Page</span>
+                    </a>
+                    
+                    <a href="/tags/Google-Domains/">
+                        <span class="chip bg-color">Google Domains</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Current&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/05/24/hexo-how-to-build-your-website-hexo-github-page/">
+                    <div class="card-image">
+                        
+                        <img src="https://uynguyen.github.io/Post-Resources/Hexo/Cover.png" class="responsive-img" alt="Hexo">
+                        
+                        <span class="card-title">Hexo</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            CHEN CHEN
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/Github-Page/">
+                        <span class="chip bg-color">Github Page</span>
+                    </a>
+                    
+                    <a href="/tags/Google-Domains/">
+                        <span class="chip bg-color">Google Domains</span>
                     </a>
                     
                 </div>
