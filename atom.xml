@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-09-21T15:43:03.483Z</updated>
+  <updated>2023-09-29T13:25:01.215Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EC6 _ Checkout + Order + Payments</title>
+    <link href="https://chenchen0324.github.io/2023/09/11/ec6-checkout-order-payments/"/>
+    <id>https://chenchen0324.github.io/2023/09/11/ec6-checkout-order-payments/</id>
+    <published>2023-09-11T10:00:00.000Z</published>
+    <updated>2023-09-29T13:25:01.215Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;EC6-Checkout-Order-Payments&quot;&gt;&lt;a href=&quot;#EC6-Checkout-Order-Payments&quot; class=&quot;headerlink&quot; title=&quot;[EC6] Checkout + Order +</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
   
   <entry>
     <title>EC5 _ Registration, Activation, Forgot Password</title>
