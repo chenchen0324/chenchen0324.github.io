@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-09-29T13:25:01.215Z</updated>
+  <updated>2023-10-07T14:22:54.779Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EC7 _ Review&amp;rating and Dashboard</title>
+    <link href="https://chenchen0324.github.io/2023/09/17/ec7-review-rating-and-dashboard/"/>
+    <id>https://chenchen0324.github.io/2023/09/17/ec7-review-rating-and-dashboard/</id>
+    <published>2023-09-17T10:25:00.000Z</published>
+    <updated>2023-10-07T14:22:54.779Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;EC7-Review-amp-rating-and-Dashboard&quot;&gt;&lt;a href=&quot;#EC7-Review-amp-rating-and-Dashboard&quot; class=&quot;headerlink&quot; title=&quot;[EC7]</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
   
   <entry>
     <title>EC6 _ Checkout + Order + Payments</title>
