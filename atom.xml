@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-10-07T14:22:54.779Z</updated>
+  <updated>2023-10-21T15:14:11.563Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EC8 _ AWS deployment</title>
+    <link href="https://chenchen0324.github.io/2023/10/22/ec8-aws-deployment/"/>
+    <id>https://chenchen0324.github.io/2023/10/22/ec8-aws-deployment/</id>
+    <published>2023-10-22T10:25:00.000Z</published>
+    <updated>2023-10-21T15:14:11.563Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;EC8-AWS-deployment&quot;&gt;&lt;a href=&quot;#EC8-AWS-deployment&quot; class=&quot;headerlink&quot; title=&quot;[EC8] AWS deployment&quot;&gt;&lt;/a&gt;[EC8] AWS</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
+    
+    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    
+  </entry>
   
   <entry>
     <title>EC7 _ Review&amp;rating and Dashboard</title>
@@ -275,7 +300,7 @@
     <link href="https://chenchen0324.github.io/2023/06/07/github-bash-git/"/>
     <id>https://chenchen0324.github.io/2023/06/07/github-bash-git/</id>
     <published>2023-06-07T00:25:00.000Z</published>
-    <updated>2023-09-20T14:50:04.235Z</updated>
+    <updated>2023-10-21T10:19:18.465Z</updated>
     
     
       
@@ -302,7 +327,7 @@
     <link href="https://chenchen0324.github.io/2023/05/24/hexo-how-to-build-your-website-hexo-github-page/"/>
     <id>https://chenchen0324.github.io/2023/05/24/hexo-how-to-build-your-website-hexo-github-page/</id>
     <published>2023-05-24T00:25:00.000Z</published>
-    <updated>2023-09-20T14:51:58.968Z</updated>
+    <updated>2023-10-21T10:25:44.472Z</updated>
     
     
       

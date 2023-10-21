@@ -1,0 +1,1093 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="EC8 _ AWS deployment, chen&#39;s Blog">
+    <meta name="description" content="[EC8] AWS deployment1, Create a IAM account to deploy
+2, Create a Zero-spent budget
+3, pip freeze &amp;gt; requirements.txt ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>EC8 _ AWS deployment | chen&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="chen's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">chen&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-house" style="zoom: 0.6;"></i>
+      
+      <span>Home</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/work" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-laptop" style="zoom: 0.6;"></i>
+      
+      <span>Work</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/life" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-camera" style="zoom: 0.6;"></i>
+      
+      <span>Life</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-box-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-user" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/links" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-link" style="zoom: 0.6;"></i>
+      
+      <span>Links</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">chen&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-house"></i>
+			
+			Home
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/work" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-laptop"></i>
+			
+			Work
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/life" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-camera"></i>
+			
+			Life
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-box-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-user"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/links" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-link"></i>
+			
+			Links
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://www.openapp.ie/wp-content/uploads/2015/03/Django.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">EC8 _ AWS deployment</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Django/">
+                                <span class="chip bg-color">Django</span>
+                            </a>
+                        
+                            <a href="/tags/EC/">
+                                <span class="chip bg-color">EC</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-10-22
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    775
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    4 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="EC8-AWS-deployment"><a href="#EC8-AWS-deployment" class="headerlink" title="[EC8] AWS deployment"></a>[EC8] AWS deployment</h1><p>1, Create a IAM account to deploy</p>
+<p>2, Create a Zero-spent budget</p>
+<p>3, pip freeze &gt; requirements.txt  (<a target="_blank" rel="noopener" href="https://github.com/chenchen0324/ec">https://github.com/chenchen0324/ec</a>)</p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx">asgiref<span class="token operator">&gt;=</span><span class="token number">3.2</span><span class="token number">.10</span>
+certifi<span class="token operator">&gt;=</span><span class="token number">2023.7</span><span class="token number">.22</span>
+charset<span class="token operator">-</span>normalizer<span class="token operator">&gt;=</span><span class="token number">3.2</span><span class="token number">.0</span>
+Django<span class="token operator">&gt;=</span><span class="token number">3.1</span>
+django<span class="token operator">-</span>admin<span class="token operator">-</span>honeypot<span class="token operator">&gt;=</span><span class="token number">1.1</span><span class="token number">.0</span>
+django<span class="token operator">-</span>admin<span class="token operator">-</span>thumbnails<span class="token operator">&gt;=</span><span class="token number">0.2</span><span class="token number">.8</span>
+django<span class="token operator">-</span>session<span class="token operator">-</span>timeout<span class="token operator">&gt;=</span><span class="token number">0.1</span><span class="token number">.0</span>
+idna<span class="token operator">&gt;=</span><span class="token number">3.4</span>
+Pillow<span class="token operator">&gt;=</span><span class="token number">9.5</span><span class="token number">.0</span>
+python<span class="token operator">-</span>decouple<span class="token operator">&gt;=</span><span class="token number">3.8</span>
+pytz<span class="token operator">&gt;=</span><span class="token number">2023.3</span>
+requests<span class="token operator">&gt;=</span><span class="token number">2.31</span><span class="token number">.0</span>
+six<span class="token operator">&gt;=</span><span class="token number">1.16</span><span class="token number">.0</span>
+sqlparse<span class="token operator">&gt;=</span><span class="token number">0.4</span><span class="token number">.4</span>
+urllib3<span class="token operator">&gt;=</span><span class="token number">2.0</span><span class="token number">.5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>4, pip install -r requirements.txt —upgrade</p>
+<p>5, pip uninstall django-admin-honeypot</p>
+<p>6, pip install django-admin-honeypot-updated-2021</p>
+<p>7, Update following into global <a target="_blank" rel="noopener" href="http://settings.py/">settings.py</a> </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token constant">DEFAULT_AUTO_FIELD</span><span class="token operator">=</span><span class="token string">'django.db.models.AutoField'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>8, pip freeze &gt; requirements.txt </p>
+<p>9, deactivate</p>
+<p>10, pip install awsebcli</p>
+<p>11, create a folder named .ebextensions on the root folder</p>
+<p>12, create  .ebextensions/django.config </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token literal-property property">option_settings</span><span class="token operator">:</span>
+  <span class="token literal-property property">aws</span><span class="token operator">:</span>elasticbeanstalk<span class="token operator">:</span>container<span class="token operator">:</span>python<span class="token operator">:</span>
+    <span class="token literal-property property">WSGIPath</span><span class="token operator">:</span> ec<span class="token punctuation">.</span>wsgi<span class="token operator">:</span>application
+  <span class="token literal-property property">aws</span><span class="token operator">:</span>elasticbeanstalk<span class="token operator">:</span>environment<span class="token operator">:</span>proxy<span class="token operator">:</span>staticfiles<span class="token operator">:</span>
+  <span class="token operator">/</span><span class="token keyword">static</span><span class="token operator">:</span> <span class="token keyword">static</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>13, source ecom/bin/activate</p>
+<p>14, python <a target="_blank" rel="noopener" href="http://manage.py/">manage.py</a> collectstatic</p>
+<p>15, deactivate</p>
+<p>16, eb init -p python-3.8 django-ec-app</p>
+<p>17, Login in IAM user → security credentials → access key (other)</p>
+<p>18, eb init —region ap-northeast-1</p>
+<p>19, n, y, </p>
+<p>20, Create .ebignore (optional)</p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx">ecom<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>21, eb create django-ec-env</p>
+<p>22, eb status</p>
+<p>23, Update global <a target="_blank" rel="noopener" href="http://settings.py/">settings.py</a> </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token constant">ALLOWED_HOSTS</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'django-ec-env.eba-xknfe2rk.ap-northeast-1.elasticbeanstalk.com'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>24, Go to django-ec-env/configuration → <strong>Environment properties (.env)</strong></p>
+<p>25, git add -A</p>
+<p>26, git commit -m ‘aws deploy’</p>
+<p>27, eb deploy</p>
+<p>28, Go to django-ec-env/configuration → database setting / postgres  (ebroot)</p>
+<p>29, Update database in global settings </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"># Database Configuration
+<span class="token keyword">import</span> os
+<span class="token keyword">if</span> <span class="token string">'RDS_DB_NAME'</span> <span class="token keyword">in</span> os<span class="token punctuation">.</span>environ<span class="token operator">:</span>
+    <span class="token constant">DATABASES</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">'default'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">'ENGINE'</span><span class="token operator">:</span> <span class="token string">'django.db.backends.postgresql'</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'NAME'</span><span class="token operator">:</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">'RDS_DB_NAME'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'USER'</span><span class="token operator">:</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">'RDS_USERNAME'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'PASSWORD'</span><span class="token operator">:</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">'RDS_PASSWORD'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'HOST'</span><span class="token operator">:</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">'RDS_HOSTNAME'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'PORT'</span><span class="token operator">:</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">'RDS_PORT'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token keyword">else</span><span class="token operator">:</span>
+    <span class="token constant">DATABASES</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">'default'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">'ENGINE'</span><span class="token operator">:</span> <span class="token string">'django.db.backends.sqlite3'</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'NAME'</span><span class="token operator">:</span> <span class="token constant">BASE_DIR</span> <span class="token operator">/</span> <span class="token string">'db.sqlite3'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>30, Activate e-com and pip install psycopg2-binary</p>
+<p>31, pip freeze &gt; requirements.txt</p>
+<p>32, Create .ebextensions/db-migrate.config </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token literal-property property">container_commands</span><span class="token operator">:</span>
+  01_migrate<span class="token operator">:</span>
+    <span class="token literal-property property">command</span><span class="token operator">:</span> <span class="token string">"source /var/app/venv/*/bin/activate &amp;&amp; python3 manage.py migrate"</span>
+    <span class="token literal-property property">leader_only</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  02_createsuperuser<span class="token operator">:</span>
+    <span class="token literal-property property">command</span><span class="token operator">:</span> <span class="token string">"source /var/app/venv/*/bin/activate &amp;&amp; echo \"from accounts.models import Account; Account.objects.create_superuser('first_name', 'last_name', 'your-email@gmail.com', 'yourusername', 'password')\" | python manage.py shell"</span>
+    <span class="token literal-property property">leader_only</span><span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token literal-property property">option_settings</span><span class="token operator">:</span>
+  <span class="token literal-property property">aws</span><span class="token operator">:</span>elasticbeanstalk<span class="token operator">:</span>application<span class="token operator">:</span>environment<span class="token operator">:</span>
+    <span class="token constant">DJANGO_SETTINGS_MODULE</span><span class="token operator">:</span> ec<span class="token punctuation">.</span>settings<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>33, Update ec/views.py </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx">reviews <span class="token operator">=</span> None<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>34, eb deploy</p>
+<p>35, <code>pip uninstall urllib3</code></p>
+<p>36, <code>pip install 'urllib3&lt;2.0'</code></p>
+<p>37, pip freeze &gt; requirements.txt</p>
+<p>38, Amazon RDS &gt; database &gt; Select &gt; VPC security groups &gt; edit inbound rules &gt; anywhere</p>
+<p>39, install postgre into mac</p>
+<p>40, Connect to AWS postgre</p>
+<p>41, Activate ecom</p>
+<p>42, python <a target="_blank" rel="noopener" href="http://manage.py/">manage.py</a> dumpdata &gt; data.json</p>
+<p>43, Update database in <a target="_blank" rel="noopener" href="http://settings.py/">settings.py</a> </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token constant">DATABASES</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">'default'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string-property property">'ENGINE'</span><span class="token operator">:</span> <span class="token string">'django.db.backends.postgresql'</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'NAME'</span><span class="token operator">:</span> <span class="token string">'ebdb'</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'USER'</span><span class="token operator">:</span> <span class="token string">'ebroot'</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'PASSWORD'</span><span class="token operator">:</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">'RDS_PASSWORD'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'HOST'</span><span class="token operator">:</span> <span class="token string">'awseb-e-s4aumhxynk-stack-awsebrdsdatabase-imiczw6cvkhq.clxmgqlkyeld.ap-northeast-1.rds.amazonaws.com'</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'PORT'</span><span class="token operator">:</span> <span class="token number">5432</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>44, Init the datebase </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx">python manage<span class="token punctuation">.</span>py shell
+from django<span class="token punctuation">.</span>contrib<span class="token punctuation">.</span>contenttypes<span class="token punctuation">.</span>models <span class="token keyword">import</span> ContentType
+ContentType<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>45, Load data </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx">python manage<span class="token punctuation">.</span>py loaddata data<span class="token punctuation">.</span>json<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>46, check the website</p>
+<p>47, Create a bucket in s3</p>
+<p>48, pip install boto3</p>
+<p>49, pip install django-storages</p>
+<p>50, Update installed_apps </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token constant">INSTALLED_APPS</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'django.contrib.admin'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.auth'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.contenttypes'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.sessions'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.messages'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.staticfiles'</span><span class="token punctuation">,</span>
+    <span class="token string">'category'</span><span class="token punctuation">,</span>
+    <span class="token string">'accounts'</span><span class="token punctuation">,</span>
+    <span class="token string">'store'</span><span class="token punctuation">,</span>
+    <span class="token string">'carts'</span><span class="token punctuation">,</span>
+    <span class="token string">'orders'</span><span class="token punctuation">,</span>
+    <span class="token string">'admin_honeypot'</span><span class="token punctuation">,</span>
+    <span class="token string">'storages'</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>51, Update static in <a target="_blank" rel="noopener" href="http://settings.py/">settings.py</a> </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"># <span class="token constant">AWS</span> <span class="token constant">S3</span> Static Files Configuration
+<span class="token constant">AWS_ACCESS_KEY_ID</span> <span class="token operator">=</span> <span class="token function">config</span><span class="token punctuation">(</span><span class="token string">'AWS_ACCESS_KEY_ID'</span><span class="token punctuation">)</span>
+<span class="token constant">AWS_SECRET_ACCESS_KEY</span> <span class="token operator">=</span> <span class="token function">config</span><span class="token punctuation">(</span><span class="token string">'AWS_SECRET_ACCESS_KEY'</span><span class="token punctuation">)</span>
+<span class="token constant">AWS_STORAGE_BUCKET_NAME</span> <span class="token operator">=</span> <span class="token function">config</span><span class="token punctuation">(</span><span class="token string">'AWS_STORAGE_BUCKET_NAME'</span><span class="token punctuation">)</span>
+<span class="token constant">AWS_S3_CUSTOM_DOMAIN</span> <span class="token operator">=</span> <span class="token string">'%s.s3.amazonaws.com'</span> <span class="token operator">%</span> <span class="token constant">AWS_STORAGE_BUCKET_NAME</span>
+<span class="token constant">AWS_S3_OBJECT_PARAMETERS</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">'CacheControl'</span><span class="token operator">:</span> <span class="token string">'max-age=86400'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token constant">AWS_S3_FILE_OVERWRITE</span> <span class="token operator">=</span> False
+<span class="token constant">AWS_DEFAULT_ACL</span> <span class="token operator">=</span> <span class="token string">'public-read'</span>
+<span class="token constant">AWS_LOCATION</span> <span class="token operator">=</span> <span class="token string">'static'</span>
+
+<span class="token constant">STATICFILES_DIRS</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'ec/static'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+<span class="token constant">STATIC_URL</span> <span class="token operator">=</span> <span class="token string">'https://%s/%s/'</span> <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token constant">AWS_S3_CUSTOM_DOMAIN</span><span class="token punctuation">,</span> <span class="token constant">AWS_LOCATION</span><span class="token punctuation">)</span>
+<span class="token constant">STATICFILES_STORAGE</span> <span class="token operator">=</span> <span class="token string">'storages.backends.s3boto3.S3Boto3Storage'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>52, python <a target="_blank" rel="noopener" href="http://manage.py/">manage.py</a> collectstatic</p>
+<p>53, Create ec/media_storages.py </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"># <span class="token constant">AWS</span> <span class="token constant">S3</span> Media Files Configuration
+from storages<span class="token punctuation">.</span>backends<span class="token punctuation">.</span>s3boto3 <span class="token keyword">import</span> S3Boto3Storage
+<span class="token keyword">class</span> <span class="token class-name">MediaStorage</span><span class="token punctuation">(</span>S3Boto3Storage<span class="token punctuation">)</span><span class="token operator">:</span>
+    location <span class="token operator">=</span> <span class="token string">'media'</span>
+    file_overwrite <span class="token operator">=</span> False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>54, Update media in <a target="_blank" rel="noopener" href="http://settings.py/">settings.py</a>  </p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token constant">DEFAULT_FILE_STORAGE</span> <span class="token operator">=</span> <span class="token string">'ec.media_storages.MediaStorage'</span>
+
+#media files configuration
+<span class="token constant">MEDIA_URL</span> <span class="token operator">=</span> <span class="token string">'/media/'</span>
+<span class="token constant">MEDIA_ROOT</span> <span class="token operator">=</span> <span class="token constant">BASE_DIR</span> <span class="token operator">/</span><span class="token string">'media'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>55, Upload media file to s3</p>
+<p>56, Runserver to check</p>
+<p>57, pip freeze &gt; requirements.txt</p>
+<p>58, git add -A</p>
+<p>59, git commit -m ‘aws s3’</p>
+<p>60, git push</p>
+<p>61, eb deploy</p>
+<p>62, Route 53 register a domain</p>
+<p>64, add your domain into allowed host and redeploy</p>
+<p>65, Route 53 → hosted zone → create record (alias)</p>
+<p>66, AWS certificate manager → request certificate </p>
+<p>67, EB env → configuration → <strong>Configure instance traffic and scaling → Add listener</strong></p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token number">443</span>
+https
+<span class="token number">80</span>
+http
+ssl certificate<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Django/">
+                                    <span class="chip bg-color">Django</span>
+                                </a>
+                            
+                                <a href="/tags/EC/">
+                                    <span class="chip bg-color">EC</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">Thank you for your generosity!</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2023/10/22/ec8-aws-deployment/">
+                    <div class="card-image">
+                        
+                        <img src="https://www.openapp.ie/wp-content/uploads/2015/03/Django.png" class="responsive-img" alt="EC8 _ AWS deployment">
+                        
+                        <span class="card-title">EC8 _ AWS deployment</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            CHEN CHEN
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Django/">
+                        <span class="chip bg-color">Django</span>
+                    </a>
+                    
+                    <a href="/tags/EC/">
+                        <span class="chip bg-color">EC</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/09/17/ec7-review-rating-and-dashboard/">
+                    <div class="card-image">
+                        
+                        <img src="https://www.openapp.ie/wp-content/uploads/2015/03/Django.png" class="responsive-img" alt="EC7 _ Review&amp;rating and Dashboard">
+                        
+                        <span class="card-title">EC7 _ Review&amp;rating and Dashboard</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            CHEN CHEN
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Django/">
+                        <span class="chip bg-color">Django</span>
+                    </a>
+                    
+                    <a href="/tags/EC/">
+                        <span class="chip bg-color">EC</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+           
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;chen chen All rights reserved. |&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+       
+      
+        </div>
+       
+    </div>
+
+<br>
+</footer>
+
+
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
