@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>chen&#39;s Blog</title>
+  <title>AI-Powered Blog</title>
   
   <subtitle>Work &amp; Life</subtitle>
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2023-10-21T15:14:11.563Z</updated>
+  <updated>2024-04-17T14:04:54.730Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -17,43 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>EC8 _ AWS deployment</title>
-    <link href="https://chenchen0324.github.io/2023/10/22/ec8-aws-deployment/"/>
-    <id>https://chenchen0324.github.io/2023/10/22/ec8-aws-deployment/</id>
-    <published>2023-10-22T10:25:00.000Z</published>
-    <updated>2023-10-21T15:14:11.563Z</updated>
+    <title>Django | Crash Course</title>
+    <link href="https://chenchen0324.github.io/2023/11/10/django-crash-course/"/>
+    <id>https://chenchen0324.github.io/2023/11/10/django-crash-course/</id>
+    <published>2023-11-10T12:35:00.000Z</published>
+    <updated>2024-04-17T14:04:54.730Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;EC8-AWS-deployment&quot;&gt;&lt;a href=&quot;#EC8-AWS-deployment&quot; class=&quot;headerlink&quot; title=&quot;[EC8] AWS deployment&quot;&gt;&lt;/a&gt;[EC8] AWS</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC7 _ Review&amp;rating and Dashboard</title>
-    <link href="https://chenchen0324.github.io/2023/09/17/ec7-review-rating-and-dashboard/"/>
-    <id>https://chenchen0324.github.io/2023/09/17/ec7-review-rating-and-dashboard/</id>
-    <published>2023-09-17T10:25:00.000Z</published>
-    <updated>2023-10-07T14:22:54.779Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;EC7-Review-amp-rating-and-Dashboard&quot;&gt;&lt;a href=&quot;#EC7-Review-amp-rating-and-Dashboard&quot; class=&quot;headerlink&quot; title=&quot;[EC7]</summary>
+    <summary type="html">&lt;h3 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract:&quot;&gt;&lt;/a&gt;Abstract:&lt;/h3&gt;&lt;p&gt;This article provides a comprehensive</summary>
         
       
     
@@ -62,279 +37,23 @@
     
     <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
     
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
+    <category term="Crash Course" scheme="https://chenchen0324.github.io/tags/Crash-Course/"/>
     
   </entry>
   
   <entry>
-    <title>EC6 _ Checkout + Order + Payments</title>
-    <link href="https://chenchen0324.github.io/2023/09/11/ec6-checkout-order-payments/"/>
-    <id>https://chenchen0324.github.io/2023/09/11/ec6-checkout-order-payments/</id>
-    <published>2023-09-11T10:00:00.000Z</published>
-    <updated>2023-09-29T13:25:01.215Z</updated>
+    <title>Hexo | Crafting your digital home</title>
+    <link href="https://chenchen0324.github.io/2023/10/26/hexo-crafting-your-digital-home/"/>
+    <id>https://chenchen0324.github.io/2023/10/26/hexo-crafting-your-digital-home/</id>
+    <published>2023-10-26T11:25:00.000Z</published>
+    <updated>2024-04-17T14:04:59.081Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;EC6-Checkout-Order-Payments&quot;&gt;&lt;a href=&quot;#EC6-Checkout-Order-Payments&quot; class=&quot;headerlink&quot; title=&quot;[EC6] Checkout + Order +</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC5 _ Registration, Activation, Forgot Password</title>
-    <link href="https://chenchen0324.github.io/2023/09/01/ec5-registration-activation-forgot-password/"/>
-    <id>https://chenchen0324.github.io/2023/09/01/ec5-registration-activation-forgot-password/</id>
-    <published>2023-09-01T00:00:00.000Z</published>
-    <updated>2023-09-21T15:43:03.483Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;EC5-Registration-Activation-Forgot-Password&quot;&gt;&lt;a href=&quot;#EC5-Registration-Activation-Forgot-Password&quot; class=&quot;headerlink&quot; title=&quot;[EC5]</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC4 _ Paginator, Search, Product Variations</title>
-    <link href="https://chenchen0324.github.io/2023/08/14/ec4-paginator-search-product-variations/"/>
-    <id>https://chenchen0324.github.io/2023/08/14/ec4-paginator-search-product-variations/</id>
-    <published>2023-08-14T00:25:00.000Z</published>
-    <updated>2023-09-20T14:49:56.414Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;EC4-Paginator-Search-Product-Variations&quot;&gt;&lt;a href=&quot;#EC4-Paginator-Search-Product-Variations&quot; class=&quot;headerlink&quot; title=&quot;[EC4]</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC3 _ Product Page + Cart App</title>
-    <link href="https://chenchen0324.github.io/2023/08/07/ec3-product-page-cart-app/"/>
-    <id>https://chenchen0324.github.io/2023/08/07/ec3-product-page-cart-app/</id>
-    <published>2023-08-07T10:25:00.000Z</published>
-    <updated>2023-09-20T14:49:49.141Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;EC3-Product-Page-Cart-App&quot;&gt;&lt;a href=&quot;#EC3-Product-Page-Cart-App&quot; class=&quot;headerlink&quot; title=&quot;[EC3] Product Page + Cart App&quot;&gt;&lt;/a&gt;[EC3]</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC2 _ Accounts App + Config Media + Store App</title>
-    <link href="https://chenchen0324.github.io/2023/07/14/ec2-accounts-app-config-media-store-app/"/>
-    <id>https://chenchen0324.github.io/2023/07/14/ec2-accounts-app-config-media-store-app/</id>
-    <published>2023-07-14T00:25:00.000Z</published>
-    <updated>2023-09-20T14:49:37.360Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;EC2-Accounts-App-Config-Media-Store-App&quot;&gt;&lt;a href=&quot;#EC2-Accounts-App-Config-Media-Store-App&quot; class=&quot;headerlink&quot; title=&quot;[EC2]</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EC1 _ Env + Config Path + Homepage + Category App</title>
-    <link href="https://chenchen0324.github.io/2023/07/07/ec1-env-config-path-homepage-category-app/"/>
-    <id>https://chenchen0324.github.io/2023/07/07/ec1-env-config-path-homepage-category-app/</id>
-    <published>2023-07-07T00:25:00.000Z</published>
-    <updated>2023-09-20T14:49:27.449Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;EC1-Env-Config-Path-Homepage-Category-App&quot;&gt;&lt;a href=&quot;#EC1-Env-Config-Path-Homepage-Category-App&quot; class=&quot;headerlink&quot; title=&quot;[EC1] Env</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Django" scheme="https://chenchen0324.github.io/tags/Django/"/>
-    
-    <category term="EC" scheme="https://chenchen0324.github.io/tags/EC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AWS EC2 _ How to use EC2 to run Jupyter Notebook</title>
-    <link href="https://chenchen0324.github.io/2023/06/25/aws-ec2-how-to-use-ec2-to-run-jupyter-notebook/"/>
-    <id>https://chenchen0324.github.io/2023/06/25/aws-ec2-how-to-use-ec2-to-run-jupyter-notebook/</id>
-    <published>2023-06-25T00:25:00.000Z</published>
-    <updated>2023-09-20T14:49:19.536Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;AWS-EC2-How-to-use-EC2-to-run-Jupyter-Notebook&quot;&gt;&lt;a href=&quot;#AWS-EC2-How-to-use-EC2-to-run-Jupyter-Notebook&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="AWS" scheme="https://chenchen0324.github.io/tags/AWS/"/>
-    
-    <category term="EC2" scheme="https://chenchen0324.github.io/tags/EC2/"/>
-    
-    <category term="Jupyter Notebook" scheme="https://chenchen0324.github.io/tags/Jupyter-Notebook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL _ Get Started with SQL</title>
-    <link href="https://chenchen0324.github.io/2023/06/13/sql-get-started-with-sql/"/>
-    <id>https://chenchen0324.github.io/2023/06/13/sql-get-started-with-sql/</id>
-    <published>2023-06-13T00:25:00.000Z</published>
-    <updated>2023-09-20T14:50:34.269Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;SQL-Get-Started-with-SQL&quot;&gt;&lt;a href=&quot;#SQL-Get-Started-with-SQL&quot; class=&quot;headerlink&quot; title=&quot;[SQL] Get Started with SQL&quot;&gt;&lt;/a&gt;[SQL] Get</summary>
-        
-      
-    
-    
-    
-    
-    <category term="SQL" scheme="https://chenchen0324.github.io/tags/SQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenAI _ Chat API + Fine Tuning</title>
-    <link href="https://chenchen0324.github.io/2023/06/10/openai-chat-api-fine-tuning/"/>
-    <id>https://chenchen0324.github.io/2023/06/10/openai-chat-api-fine-tuning/</id>
-    <published>2023-06-10T00:25:00.000Z</published>
-    <updated>2023-09-20T14:50:25.782Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;OpenAI-Chat-API-Fine-Tuning&quot;&gt;&lt;a href=&quot;#OpenAI-Chat-API-Fine-Tuning&quot; class=&quot;headerlink&quot; title=&quot;[OpenAI] Chat API + Fine</summary>
-        
-      
-    
-    
-    
-    <category term="Assistant" scheme="https://chenchen0324.github.io/categories/Assistant/"/>
-    
-    
-    <category term="OpenAI" scheme="https://chenchen0324.github.io/tags/OpenAI/"/>
-    
-    <category term="ChatGPT" scheme="https://chenchen0324.github.io/tags/ChatGPT/"/>
-    
-    <category term="Fine-Tuning" scheme="https://chenchen0324.github.io/tags/Fine-Tuning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub _ Bash + Git</title>
-    <link href="https://chenchen0324.github.io/2023/06/07/github-bash-git/"/>
-    <id>https://chenchen0324.github.io/2023/06/07/github-bash-git/</id>
-    <published>2023-06-07T00:25:00.000Z</published>
-    <updated>2023-10-21T10:19:18.465Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;GitHub-Bash-Git&quot;&gt;&lt;a href=&quot;#GitHub-Bash-Git&quot; class=&quot;headerlink&quot; title=&quot;[GitHub] Bash + Git&quot;&gt;&lt;/a&gt;[GitHub] Bash + Git&lt;/h1&gt;&lt;p&gt;Refer: &lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Bash" scheme="https://chenchen0324.github.io/tags/Bash/"/>
-    
-    <category term="Git" scheme="https://chenchen0324.github.io/tags/Git/"/>
-    
-    <category term="GitHub" scheme="https://chenchen0324.github.io/tags/GitHub/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo _ How to build your website with Hexo+Github Page+Google Domains</title>
-    <link href="https://chenchen0324.github.io/2023/05/24/hexo-how-to-build-your-website-hexo-github-page/"/>
-    <id>https://chenchen0324.github.io/2023/05/24/hexo-how-to-build-your-website-hexo-github-page/</id>
-    <published>2023-05-24T00:25:00.000Z</published>
-    <updated>2023-10-21T10:25:44.472Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Hexo-How-to-build-your-website-Hexo-Github-Page-Google-Domains&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h3 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract:&quot;&gt;&lt;/a&gt;Abstract:&lt;/h3&gt;&lt;p&gt;This article outlines a comprehensive guide</summary>
         
       
     
@@ -343,9 +62,7 @@
     
     <category term="Hexo" scheme="https://chenchen0324.github.io/tags/Hexo/"/>
     
-    <category term="Github Page" scheme="https://chenchen0324.github.io/tags/Github-Page/"/>
-    
-    <category term="Google Domains" scheme="https://chenchen0324.github.io/tags/Google-Domains/"/>
+    <category term="GitHub Pages" scheme="https://chenchen0324.github.io/tags/GitHub-Pages/"/>
     
   </entry>
   

@@ -1,0 +1,1493 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Django | Crash Course, AI-Powered Blog">
+    <meta name="description" content="Abstract:This article provides a comprehensive overview of a Django crash course, detailing the steps involved in creati">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Django | Crash Course | AI-Powered Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="AI-Powered Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">AI-Powered Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-house" style="zoom: 0.6;"></i>
+      
+      <span>Home</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/work" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-laptop" style="zoom: 0.6;"></i>
+      
+      <span>Work</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/life" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-camera" style="zoom: 0.6;"></i>
+      
+      <span>Life</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-box-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fa-solid fa-user" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">AI-Powered Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-house"></i>
+			
+			Home
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/work" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-laptop"></i>
+			
+			Work
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/life" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-camera"></i>
+			
+			Life
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-box-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa-solid fa-user"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://chenblog.s3.ap-northeast-1.amazonaws.com/Covers/Django+|+Crash+Course.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Django | Crash Course</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Django/">
+                                <span class="chip bg-color">Django</span>
+                            </a>
+                        
+                            <a href="/tags/Crash-Course/">
+                                <span class="chip bg-color">Crash Course</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-11-10
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    3.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    20 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract:"></a>Abstract:</h3><p>This article provides a comprehensive overview of a Django crash course, detailing the steps involved in creating dynamic web applications. It covers setting up a virtual environment, starting a new Django project, configuring settings, understanding the MVT (Model-View-Template) pattern, creating views and templates, integrating Bootstrap for styling, managing static files, working with Django’s admin interface, setting up a database, and creating models for tasks. Additionally, it explores functionalities such as adding, marking tasks as done, editing, and deleting tasks, along with enhancing the admin page and managing media files. Each step is accompanied by relevant code snippets and instructions to guide learners through the process effectively. Whether you’re new to Django or looking to reinforce your skills, this crash course offers a structured and hands-on approach to building powerful web applications.</p>
+<h3 id="1-Install-virtual-env"><a href="#1-Install-virtual-env" class="headerlink" title="1, Install virtual env"></a>1, Install virtual env</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># install</span>
+pip install virtualenv
+
+<span class="token comment"># create a virtual env</span>
+python <span class="token operator">-</span>m venv <span class="token punctuation">{</span><span class="token punctuation">{</span>env name<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token comment"># Activate virtual env</span>
+source <span class="token punctuation">{</span><span class="token punctuation">{</span>env name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>activate
+
+<span class="token comment"># Check installed libraries</span>
+pip freeze
+
+<span class="token comment"># Install Django library</span>
+pip install django
+
+<span class="token comment"># Deactivate virtual env</span>
+deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-Start-new-Django-project"><a href="#2-Start-new-Django-project" class="headerlink" title="2, Start new Django project"></a>2, Start new Django project</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Create new project</span>
+django<span class="token operator">-</span>admin startproject <span class="token punctuation">{</span><span class="token punctuation">{</span>project name<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token comment"># Run server of the new project</span>
+python manage<span class="token punctuation">.</span>py runserver
+
+<span class="token comment"># Stop server </span>
+Ctrl <span class="token operator">+</span> C<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-Django-settings-py"><a href="#3-Django-settings-py" class="headerlink" title="3, Django settings.py"></a>3, Django <a target="_blank" rel="noopener" href="http://settings.py/">settings.py</a></h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Get your root folder name automatically</span>
+<span class="token comment"># Build paths inside the project like this: BASE_DIR / 'subdir'.</span>
+BASE_DIR <span class="token operator">=</span> Path<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span><span class="token punctuation">.</span>resolve<span class="token punctuation">(</span>strict<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">.</span>parent<span class="token punctuation">.</span>parent
+
+<span class="token comment"># SECURITY WARNING: keep the secret key used in production secret!</span>
+<span class="token comment"># Being used to HASH function like password</span>
+SECRET_KEY <span class="token operator">=</span> <span class="token string">'YOUR_SECURITY_KEY'</span>
+
+<span class="token comment"># SECURITY WARNING: don't run with debug turned on in production!</span>
+<span class="token comment"># Won't return wrong information if turned off</span>
+DEBUG <span class="token operator">=</span> <span class="token boolean">True</span>
+
+<span class="token comment"># Add your domain inside it in Prod env</span>
+ALLOWED_HOSTS <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Application definition, Django official modules</span>
+INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'django.contrib.admin'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.auth'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.contenttypes'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.sessions'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.messages'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.staticfiles'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+MIDDLEWARE <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'django.middleware.security.SecurityMiddleware'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.sessions.middleware.SessionMiddleware'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.middleware.common.CommonMiddleware'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.middleware.csrf.CsrfViewMiddleware'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.auth.middleware.AuthenticationMiddleware'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.messages.middleware.MessageMiddleware'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.middleware.clickjacking.XFrameOptionsMiddleware'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token comment"># Define the location of the global url</span>
+ROOT_URLCONF <span class="token operator">=</span> <span class="token string">'ecom.urls'</span>
+
+<span class="token comment"># Define where to get the front end templates</span>
+TEMPLATES <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">'BACKEND'</span><span class="token punctuation">:</span> <span class="token string">'django.template.backends.django.DjangoTemplates'</span><span class="token punctuation">,</span>
+        <span class="token string">'DIRS'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">'APP_DIRS'</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">,</span>
+        <span class="token string">'OPTIONS'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">'context_processors'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                <span class="token string">'django.template.context_processors.debug'</span><span class="token punctuation">,</span>
+                <span class="token string">'django.template.context_processors.request'</span><span class="token punctuation">,</span>
+                <span class="token string">'django.contrib.auth.context_processors.auth'</span><span class="token punctuation">,</span>
+                <span class="token string">'django.contrib.messages.context_processors.messages'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token comment"># Define the location of wsgi (for deployment)</span>
+WSGI_APPLICATION <span class="token operator">=</span> <span class="token string">'ecom.wsgi.application'</span>
+
+<span class="token comment"># Config database, default is sqlite3</span>
+DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'ENGINE'</span><span class="token punctuation">:</span> <span class="token string">'django.db.backends.sqlite3'</span><span class="token punctuation">,</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> BASE_DIR <span class="token operator">/</span> <span class="token string">'db.sqlite3'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># Validate the passwords used in application</span>
+AUTH_PASSWORD_VALIDATORS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">'django.contrib.auth.password_validation.MinimumLengthValidator'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">'django.contrib.auth.password_validation.CommonPasswordValidator'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">'django.contrib.auth.password_validation.NumericPasswordValidator'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token comment"># Internationalization</span>
+<span class="token comment"># https://docs.djangoproject.com/en/3.1/topics/i18n/</span>
+<span class="token comment"># Set language, time zone etc</span>
+LANGUAGE_CODE <span class="token operator">=</span> <span class="token string">'en-us'</span>
+TIME_ZONE <span class="token operator">=</span> <span class="token string">'UTC'</span>
+USE_I18N <span class="token operator">=</span> <span class="token boolean">True</span>
+USE_L10N <span class="token operator">=</span> <span class="token boolean">True</span>
+USE_TZ <span class="token operator">=</span> <span class="token boolean">True</span>
+
+<span class="token comment"># Static files (CSS, JavaScript, Images)</span>
+<span class="token comment"># https://docs.djangoproject.com/en/3.1/howto/static-files/</span>
+<span class="token comment"># Set the location of static files</span>
+STATIC_URL <span class="token operator">=</span> <span class="token string">'/static/'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-Django-MVT-pattern"><a href="#4-Django-MVT-pattern" class="headerlink" title="4, Django MVT pattern"></a>4, Django MVT pattern</h3><p><img src="https://chenblog.s3.ap-northeast-1.amazonaws.com/Covers/Django+%7C+MVT.png" alt="https://chenblog.s3.ap-northeast-1.amazonaws.com/Covers/Django+%7C+MVT.png"></p>
+<h3 id="5-Create-a-homepage-to-print-‘Hello-Word’"><a href="#5-Create-a-homepage-to-print-‘Hello-Word’" class="headerlink" title="5, Create a homepage to print ‘Hello Word’"></a>5, Create a homepage to print ‘Hello Word’</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Global urls.py</span>
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">'admin/'</span><span class="token punctuation">,</span> admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>urls<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">(</span><span class="token string">'home/'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>home<span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+<span class="token comment"># GLobal views.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
+<span class="token keyword">def</span> <span class="token function">home</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">'&lt;h3&gt; Hello World &lt;/h3&gt;'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="6-Render-the-home-page-from-templates"><a href="#6-Render-the-home-page-from-templates" class="headerlink" title="6, Render the home page from templates"></a>6, Render the home page from templates</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Global views.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+<span class="token keyword">def</span> <span class="token function">home</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'home.html'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Create templates/home.html</span>
+<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span> Hello World <span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+
+<span class="token comment"># Global settings</span>
+<span class="token string">'DIRS'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'templates'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="7-Add-bootstrap-into-html"><a href="#7-Add-bootstrap-into-html" class="headerlink" title="7, Add bootstrap into html"></a>7, Add bootstrap into html</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">&lt;</span>!DOCTYPE html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, initial-scale=1.0"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+    ss
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-Config-static-files-for-Django-CSS-Images"><a href="#8-Config-static-files-for-Django-CSS-Images" class="headerlink" title="8, Config static files for Django (CSS+Images)"></a>8, Config static files for Django (CSS+Images)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Create ecom/statics/css/style.css</span>
+body<span class="token punctuation">{</span>
+    background<span class="token operator">-</span>color<span class="token punctuation">:</span> aqua<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment"># Create ecom/statics/images/yourimg.png</span>
+<span class="token comment"># Global settings.py</span>
+STATIC_URL <span class="token operator">=</span> <span class="token string">'/static/'</span>
+STATIC_ROOT <span class="token operator">=</span> BASE_DIR <span class="token operator">/</span><span class="token string">'static'</span> <span class="token comment"># for deployment, collect static</span>
+STATICFILES_DIRS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'ecom/static'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token comment"># Use static inside home.html</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> load static <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>!DOCTYPE html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, initial-scale=1.0"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"{% static 'css/style.css' %}"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+    ss
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"{% static 'images/IMG_3776.JPG' %}"</span> alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="9-python-manage-py-startapp"><a href="#9-python-manage-py-startapp" class="headerlink" title="9, python manage.py startapp "></a>9, python <a target="_blank" rel="noopener" href="http://manage.py/">manage.py</a> startapp </h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># admin.py -&gt; decide whether and how to show tables in admin page</span>
+<span class="token comment"># apps.py -&gt; add apps configuration</span>
+<span class="token comment"># models.py -&gt; create tables</span>
+<span class="token comment"># tests.py -&gt; create test function</span>
+<span class="token comment"># views.py -&gt; create functions (logic of your app)</span>
+
+<span class="token comment"># add into settings</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="10-Django-admin-page"><a href="#10-Django-admin-page" class="headerlink" title="10, Django admin page"></a>10, Django admin page</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py migrate
+python manage<span class="token punctuation">.</span>py createsuperuser
+<span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">8000</span><span class="token operator">/</span>admin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="11-Create-the-table-in-the-new-app-models-py"><a href="#11-Create-the-table-in-the-new-app-models-py" class="headerlink" title="11, Create the table in the new app models.py"></a>11, Create the table in the new app <a target="_blank" rel="noopener" href="http://models.py/">models.py</a></h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+
+<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    first_name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+    last_name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+    photo <span class="token operator">=</span> models<span class="token punctuation">.</span>ImageField<span class="token punctuation">(</span>upload_to<span class="token operator">=</span><span class="token string">'image'</span><span class="token punctuation">)</span>
+    nick_name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+    email_address <span class="token operator">=</span> models<span class="token punctuation">.</span>EmailField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    phone_number <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">12</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    created_at <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>auto_now_add<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    updated_at <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>auto_now<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>first_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="12-Migrate-to-database"><a href="#12-Migrate-to-database" class="headerlink" title="12, Migrate to database"></a>12, Migrate to database</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py makemigrations
+python manage<span class="token punctuation">.</span>py migrate<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="13-Register-the-table-into-admin-page"><a href="#13-Register-the-table-into-admin-page" class="headerlink" title="13, Register the table into admin page"></a>13, Register the table into admin page</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> User
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>User<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="14-Config-media-folder"><a href="#14-Config-media-folder" class="headerlink" title="14, Config media folder"></a>14, Config media folder</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Global settings.py -&gt;</span>
+<span class="token comment"># Media files configuration</span>
+MEDIA_URL <span class="token operator">=</span> <span class="token string">'/media/'</span>
+MEDIA_ROOT <span class="token operator">=</span> BASE_DIR <span class="token operator">/</span><span class="token string">'media'</span>
+
+<span class="token comment"># Create a media folder</span>
+
+<span class="token comment"># Global urls.py -&gt;</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>conf <span class="token keyword">import</span> settings
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls<span class="token punctuation">.</span>static <span class="token keyword">import</span> static
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">'admin/'</span><span class="token punctuation">,</span> admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>urls<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">(</span><span class="token string">'home/'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>home<span class="token punctuation">)</span>
+<span class="token punctuation">]</span> <span class="token operator">+</span> static<span class="token punctuation">(</span>settings<span class="token punctuation">.</span>MEDIA_URL<span class="token punctuation">,</span> document_root<span class="token operator">=</span>settings<span class="token punctuation">.</span>MEDIA_ROOT<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="15-Fetch-data-from-previous-table"><a href="#15-Fetch-data-from-previous-table" class="headerlink" title="15, Fetch data from previous table"></a>15, Fetch data from previous table</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Global view.py</span>
+<span class="token keyword">from</span> firstapp<span class="token punctuation">.</span>models <span class="token keyword">import</span> User
+<span class="token keyword">def</span> <span class="token function">home</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    users <span class="token operator">=</span> User<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    context <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'users'</span><span class="token punctuation">:</span> users<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'home.html'</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span>
+
+<span class="token comment"># home.html</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> users <span class="token operator">%</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span>h4<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span> i <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h4<span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span><span class="token operator">%</span> endfor <span class="token operator">%</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="16-Show-data-on-the-html-table"><a href="#16-Show-data-on-the-html-table" class="headerlink" title="16, Show data on the html table"></a>16, Show data on the html table</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">{</span><span class="token operator">%</span> load static <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>!DOCTYPE html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, initial-scale=1.0"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"{% static 'css/style.css' %}"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>User List<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>table <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"table"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>thead<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>tr<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>th scope<span class="token operator">=</span><span class="token string">"col"</span><span class="token operator">&gt;</span> <span class="token comment"># &lt;/th&gt;</span>
+          <span class="token operator">&lt;</span>th scope<span class="token operator">=</span><span class="token string">"col"</span><span class="token operator">&gt;</span> Full Name<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>th scope<span class="token operator">=</span><span class="token string">"col"</span><span class="token operator">&gt;</span> Email <span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>th scope<span class="token operator">=</span><span class="token string">"col"</span><span class="token operator">&gt;</span> Phone <span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>thead<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>tbody<span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">for</span> u <span class="token keyword">in</span> users <span class="token operator">%</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>tr<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>th<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span> forloop<span class="token punctuation">.</span>counter <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>th<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>u<span class="token punctuation">.</span>first_name<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>u<span class="token punctuation">.</span>last_name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>th<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>u<span class="token punctuation">.</span>email_address<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>th<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>u<span class="token punctuation">.</span>phone_number<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span><span class="token operator">%</span> endfor <span class="token operator">%</span><span class="token punctuation">}</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>tbody<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>table<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="17-Detail-page-of-each-user"><a href="#17-Detail-page-of-each-user" class="headerlink" title="17, Detail page of each user"></a>17, Detail page of each user</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Global urls.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path<span class="token punctuation">,</span> include
+path<span class="token punctuation">(</span><span class="token string">'users/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">'firstapp.urls'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># firstapp/urls.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+	    path<span class="token punctuation">(</span><span class="token string">'&lt;int:pk&gt;/'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>user_detail<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'user_detail'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token comment"># firstapp/views.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render<span class="token punctuation">,</span> get_object_or_404
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> User
+<span class="token keyword">def</span> <span class="token function">user_detail</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    user <span class="token operator">=</span> get_object_or_404<span class="token punctuation">(</span>User<span class="token punctuation">,</span> pk<span class="token operator">=</span>pk<span class="token punctuation">)</span>
+    context <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'user'</span><span class="token punctuation">:</span> user
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'user_detail.html'</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span>
+
+<span class="token comment"># templates/user_detail.html</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> load static <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>!DOCTYPE html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, initial-scale=1.0"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Document<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"{% static 'css/style.css' %}"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+   
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card mx-auto"</span> style<span class="token operator">=</span><span class="token string">"width: 18rem;"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>img <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-img-top"</span> src<span class="token operator">=</span><span class="token string">"{{ user.photo.url }}"</span> alt<span class="token operator">=</span><span class="token string">"Card image cap"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-body"</span><span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-text"</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>first_name<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>last_name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-text"</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>email_address<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+              <span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-text"</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>phone_number<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"{% url 'home' %}"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-primary"</span><span class="token operator">&gt;</span>Back to Home<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+
+<span class="token comment"># templates/home.html</span>
+<span class="token operator">&lt;</span>th<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"{% url 'user_detail' u.id %}"</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>u<span class="token punctuation">.</span>first_name<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>u<span class="token punctuation">.</span>last_name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="18-To-Do-App-→-initiate-the-project"><a href="#18-To-Do-App-→-initiate-the-project" class="headerlink" title="18, To-Do App → initiate the project"></a>18, To-Do App → initiate the project</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">python <span class="token operator">-</span>m venv env
+source env<span class="token operator">/</span><span class="token builtin">bin</span><span class="token operator">/</span>activate
+pip install Django
+django<span class="token operator">-</span>admin startproject todo_main
+python manage<span class="token punctuation">.</span>py migrate
+python manage<span class="token punctuation">.</span>py createsuperuser<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="19-Create-url-and-home-function-print-helloword-for-homepage"><a href="#19-Create-url-and-home-function-print-helloword-for-homepage" class="headerlink" title="19, Create url and home function (print helloword) for homepage"></a>19, Create url and home function (print helloword) for homepage</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Global urls.py</span>
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+path<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>home<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'home'</span><span class="token punctuation">)</span>
+
+<span class="token comment">#Global views.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
+<span class="token keyword">def</span> <span class="token function">home</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">'&lt;h1&gt;HelloWorld&lt;h1/&gt;'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="20-User-render-templates-home-html-instead-of-HttpResponse"><a href="#20-User-render-templates-home-html-instead-of-HttpResponse" class="headerlink" title="20, User render templates home.html instead of HttpResponse"></a>20, User render templates home.html instead of HttpResponse</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Global views.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+<span class="token keyword">def</span> <span class="token function">home</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'home.html'</span><span class="token punctuation">)</span>
+<span class="token comment"># Global settings.py</span>
+<span class="token string">'DIRS'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'templates'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token comment"># templates/home.html</span>
+<span class="token operator">&lt;</span>!DOCTYPE html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">"X-UA-Compatible"</span> content<span class="token operator">=</span><span class="token string">"IE=edge"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, initial-scale=1.0"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>TODO LIST <span class="token operator">-</span> Home<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> Bootstrap <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> Font Awesome Icons <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span><span class="token operator">&gt;</span>
+    
+    <span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+        <span class="token punctuation">.</span>form<span class="token operator">-</span>control<span class="token punctuation">{</span>
+        padding<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">.</span>375rem <span class="token punctuation">.</span>75rem !important<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3 <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"pt-5 text-center"</span><span class="token operator">&gt;</span>Django ToDo App<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"row"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>h4<span class="token operator">&gt;</span>My Day<span class="token operator">&lt;</span><span class="token operator">/</span>h4<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"text-muted"</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token operator">%</span> now <span class="token string">"jS F Y"</span> <span class="token operator">%</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-7 col-lg-7"</span> style<span class="token operator">=</span><span class="token string">"height: 450px; overflow: scroll;"</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> List of <span class="token builtin">all</span> the tasks <span class="token keyword">for</span> the day <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card m-1"</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-body"</span><span class="token operator">&gt;</span>
+                        This <span class="token keyword">is</span> some Task
+                        <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token string">"position: relative; float: right;"</span><span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-success"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-check"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span> Mark <span class="token keyword">as</span> Done<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-danger"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-trash"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-primary"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-pencil"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+               
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-5 col-lg-5"</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>h5<span class="token operator">&gt;</span>Completed Tasks<span class="token operator">&lt;</span><span class="token operator">/</span>h5<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> List of <span class="token builtin">all</span> the tasks that have completed <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card m-1"</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-body"</span><span class="token operator">&gt;</span>
+                        This <span class="token keyword">is</span> the completed task<span class="token punctuation">.</span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"row"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 col-lg-6 p-0"</span> style<span class="token operator">=</span><span class="token string">"position: absolute; bottom: 50px;"</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> To Do Form <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>form action<span class="token operator">=</span><span class="token string">""</span> <span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token string">"display: flex;"</span><span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span><span class="token builtin">input</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">"text"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> placeholder<span class="token operator">=</span><span class="token string">"Add a task"</span><span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>button <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-primary"</span> style<span class="token operator">=</span><span class="token string">"width: 200px;"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-plus"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span> Add<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="21-GitHub-Crash"><a href="#21-GitHub-Crash" class="headerlink" title="21, GitHub Crash"></a>21, GitHub Crash</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">1.</span> Create a repo inside github
+<span class="token number">2.</span> git init
+<span class="token number">3.</span> git add <span class="token operator">-</span>A
+<span class="token number">4.</span> git commit <span class="token operator">-</span>m <span class="token string">"first commit"</span>
+<span class="token number">5.</span> git branch <span class="token operator">-</span>M main
+<span class="token number">6.</span> git remote add origin git@github<span class="token punctuation">.</span>com<span class="token punctuation">:</span>chenchen0324<span class="token operator">/</span>ToDo<span class="token operator">-</span>Django<span class="token punctuation">.</span>git
+<span class="token number">7.</span> git push <span class="token operator">-</span>u origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="22-Start-todo-app-and-create-Task-table-in-models-py"><a href="#22-Start-todo-app-and-create-Task-table-in-models-py" class="headerlink" title="22, Start todo app and create Task table in models.py"></a>22, Start todo app and create Task table in models.py</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">python manage<span class="token punctuation">.</span>py startapp todo
+update settings<span class="token punctuation">.</span>py INSTALLED_APPS
+<span class="token comment"># todo/models.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+<span class="token keyword">class</span> <span class="token class-name">Task</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    task <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">255</span><span class="token punctuation">)</span>
+    is_completed <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    created_at <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>auto_now_add<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    updated_at <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>auto_now<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>task
+<span class="token comment"># todo/admin.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Task
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Task<span class="token punctuation">)</span>
+<span class="token comment"># Migrate</span>
+<span class="token comment"># check in admin page and add some tasks</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="23-Fetch-Task-data-and-put-into-home-html"><a href="#23-Fetch-Task-data-and-put-into-home-html" class="headerlink" title="23, Fetch Task data and put into home.html"></a>23, Fetch Task data and put into home.html</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Global views.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+<span class="token keyword">from</span> todo<span class="token punctuation">.</span>models <span class="token keyword">import</span> Task
+<span class="token keyword">def</span> <span class="token function">home</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    tasks <span class="token operator">=</span> Task<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>is_completed<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">.</span>order_by<span class="token punctuation">(</span><span class="token string">'updated_at'</span><span class="token punctuation">)</span>
+    context <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'tasks'</span><span class="token punctuation">:</span> tasks<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'home.html'</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span>
+<span class="token comment"># home.html</span>
+<span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> List of <span class="token builtin">all</span> the tasks <span class="token keyword">for</span> the day <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">for</span> task <span class="token keyword">in</span> tasks <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card m-1"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-body"</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">{</span> task<span class="token punctuation">.</span>task <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token string">"position: relative; float: right;"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-success"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-check"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span> Mark <span class="token keyword">as</span> Done<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-danger"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-trash"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-primary"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-pencil"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> endfor <span class="token operator">%</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="24-Admin-page-enhancements"><a href="#24-Admin-page-enhancements" class="headerlink" title="24, Admin page enhancements"></a>24, Admin page enhancements</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Task
+<span class="token keyword">class</span> <span class="token class-name">TaskAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    list_display <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'task'</span><span class="token punctuation">,</span> <span class="token string">'is_completed'</span><span class="token punctuation">,</span> <span class="token string">'updated_at'</span><span class="token punctuation">)</span>
+    search_fields <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'task'</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Task<span class="token punctuation">,</span> TaskAdmin<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="25-Add-Task-function"><a href="#25-Add-Task-function" class="headerlink" title="25, Add Task function"></a>25, Add Task function</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Global urls.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path<span class="token punctuation">,</span> include
+path<span class="token punctuation">(</span><span class="token string">'todo/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">'todo.urls'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token comment"># todo/urls.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">'addTask/'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>addTask<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'addTask'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+<span class="token comment"># todo/views.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render<span class="token punctuation">,</span> redirect
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Task
+<span class="token keyword">def</span> <span class="token function">addTask</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    task <span class="token operator">=</span> request<span class="token punctuation">.</span>POST<span class="token punctuation">[</span><span class="token string">'task'</span><span class="token punctuation">]</span>
+    Task<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>create<span class="token punctuation">(</span>task<span class="token operator">=</span>task<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> redirect<span class="token punctuation">(</span><span class="token string">'home'</span><span class="token punctuation">)</span>
+<span class="token comment"># home.html</span>
+<span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> To Do Form <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>form action<span class="token operator">=</span><span class="token string">"{% url 'addTask' %}"</span> method<span class="token operator">=</span><span class="token string">"POST"</span> <span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span><span class="token operator">%</span> csrf_token <span class="token operator">%</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token string">"display: flex;"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token builtin">input</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"task"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> placeholder<span class="token operator">=</span><span class="token string">"Add a task"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>button <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">"submit"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-primary"</span> style<span class="token operator">=</span><span class="token string">"width: 200px;"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-plus"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span> Add<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="26-Show-completed-tasks-in-home-page"><a href="#26-Show-completed-tasks-in-home-page" class="headerlink" title="26, Show completed tasks in home page"></a>26, Show completed tasks in home page</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Global views.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+<span class="token keyword">from</span> todo<span class="token punctuation">.</span>models <span class="token keyword">import</span> Task
+<span class="token keyword">def</span> <span class="token function">home</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    tasks <span class="token operator">=</span> Task<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>is_completed<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">.</span>order_by<span class="token punctuation">(</span><span class="token string">'updated_at'</span><span class="token punctuation">)</span>
+    completed_tasks <span class="token operator">=</span> Task<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>is_completed<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">.</span>order_by<span class="token punctuation">(</span><span class="token string">'updated_at'</span><span class="token punctuation">)</span>
+    context <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'tasks'</span><span class="token punctuation">:</span> tasks<span class="token punctuation">,</span>
+        <span class="token string">'completed_tasks'</span><span class="token punctuation">:</span> completed_tasks<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'home.html'</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span>
+<span class="token comment"># home.html</span>
+<span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> List of <span class="token builtin">all</span> the tasks that have completed <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token keyword">for</span> task <span class="token keyword">in</span> completed_tasks <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card m-1"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-body"</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">{</span> task<span class="token punctuation">.</span>task <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> endfor <span class="token operator">%</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="27-Mark-as-done-function"><a href="#27-Mark-as-done-function" class="headerlink" title="27, Mark as done function"></a>27, Mark as done function</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># todo/urls.py</span>
+path<span class="token punctuation">(</span><span class="token string">'mark_as_done/&lt;int:pk&gt;/'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>mark_as_done<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'mark_as_done'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token comment"># home.html</span>
+<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"{% url 'mark_as_done' task.pk %}"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-success"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-check"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span> Mark <span class="token keyword">as</span> Done<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+<span class="token comment"># todo/views.py</span>
+<span class="token keyword">def</span> <span class="token function">mark_as_done</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    task <span class="token operator">=</span> get_object_or_404<span class="token punctuation">(</span>Task<span class="token punctuation">,</span> pk<span class="token operator">=</span>pk<span class="token punctuation">)</span>
+    task<span class="token punctuation">.</span>is_completed <span class="token operator">=</span> <span class="token boolean">True</span>
+    task<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> redirect<span class="token punctuation">(</span><span class="token string">'home'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="28-Edit-task-and-Mark-as-undone-and-Delete-Task"><a href="#28-Edit-task-and-Mark-as-undone-and-Delete-Task" class="headerlink" title="28, Edit task and Mark as undone and Delete Task"></a>28, Edit task and Mark as undone and Delete Task</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># todo/urls.py</span>
+path<span class="token punctuation">(</span><span class="token string">'mark_as_undone/&lt;int:pk&gt;/'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>mark_as_undone<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'mark_as_undone'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+path<span class="token punctuation">(</span><span class="token string">'edit_task/&lt;int:pk&gt;/'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>edit_task<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'edit_task'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+path<span class="token punctuation">(</span><span class="token string">'delete_task/&lt;int:pk&gt;/'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>delete_task<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'delete_task'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token comment"># home.html</span>
+<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"{% url 'delete_task' task.pk %}"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-danger"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-trash"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"{% url 'edit_task' task.pk %}"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-primary"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-pencil"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span> task<span class="token punctuation">.</span>task <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token string">"position: relative; float: right;"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"{% url 'mark_as_undone' task.pk %}"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-danger"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-check"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span> Mark <span class="token keyword">as</span> Undone<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+<span class="token comment"># todo/views.py</span>
+<span class="token keyword">def</span> <span class="token function">mark_as_undone</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    task <span class="token operator">=</span> get_object_or_404<span class="token punctuation">(</span>Task<span class="token punctuation">,</span> pk<span class="token operator">=</span>pk<span class="token punctuation">)</span>
+    task<span class="token punctuation">.</span>is_completed <span class="token operator">=</span> <span class="token boolean">False</span>
+    task<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> redirect<span class="token punctuation">(</span><span class="token string">'home'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">delete_task</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    task <span class="token operator">=</span> get_object_or_404<span class="token punctuation">(</span>Task<span class="token punctuation">,</span> pk<span class="token operator">=</span>pk<span class="token punctuation">)</span>
+    task<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> redirect<span class="token punctuation">(</span><span class="token string">'home'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">edit_task</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> pk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    get_task <span class="token operator">=</span> get_object_or_404<span class="token punctuation">(</span>Task<span class="token punctuation">,</span> pk<span class="token operator">=</span>pk<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'POST'</span><span class="token punctuation">:</span>
+        get_task<span class="token punctuation">.</span>task <span class="token operator">=</span> request<span class="token punctuation">.</span>POST<span class="token punctuation">[</span><span class="token string">'task'</span><span class="token punctuation">]</span>
+        get_task<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> redirect<span class="token punctuation">(</span><span class="token string">'home'</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        context <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token string">'get_task'</span><span class="token punctuation">:</span> get_task<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'edit_task.html'</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span>
+<span class="token comment"># edit_task.html</span>
+<span class="token operator">&lt;</span>!DOCTYPE html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, initial-scale=1.0"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Edit Task<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+
+     <span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> Bootstrap <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"</span> integrity<span class="token operator">=</span><span class="token string">"sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"</span> crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> Font Awesome Icons <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+       <span class="token operator">&lt;</span>h3 <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"pt-5 pb-5 text-center"</span><span class="token operator">&gt;</span>Edit Task<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+       <span class="token operator">&lt;</span>!<span class="token operator">-</span><span class="token operator">-</span> To Do Form <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">&gt;</span>
+       <span class="token operator">&lt;</span>form action<span class="token operator">=</span><span class="token string">"{% url 'edit_task' get_task.pk %}"</span> method<span class="token operator">=</span><span class="token string">"POST"</span> style<span class="token operator">=</span><span class="token string">"width:500px; margin: auto;"</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token operator">%</span> csrf_token <span class="token operator">%</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-group"</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token string">"display: flex;"</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span><span class="token builtin">input</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"task"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"form-control"</span> placeholder<span class="token operator">=</span><span class="token string">"Add a task"</span> value<span class="token operator">=</span><span class="token string">"{{ get_task.task}}"</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>button <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">"submit"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"btn btn-primary"</span> style<span class="token operator">=</span><span class="token string">"width: 200px;"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"fa fa-plus"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>i<span class="token operator">&gt;</span> Update<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Django/">
+                                    <span class="chip bg-color">Django</span>
+                                </a>
+                            
+                                <a href="/tags/Crash-Course/">
+                                    <span class="chip bg-color">Crash Course</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">Thank you for your generosity!</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2023/11/10/django-crash-course/">
+                    <div class="card-image">
+                        
+                        <img src="https://chenblog.s3.ap-northeast-1.amazonaws.com/Covers/Django+|+Crash+Course.jpg" class="responsive-img" alt="Django | Crash Course">
+                        
+                        <span class="card-title">Django | Crash Course</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            CHEN CHEN
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Django/">
+                        <span class="chip bg-color">Django</span>
+                    </a>
+                    
+                    <a href="/tags/Crash-Course/">
+                        <span class="chip bg-color">Crash Course</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/10/26/hexo-crafting-your-digital-home/">
+                    <div class="card-image">
+                        
+                        <img src="https://chenblog.s3.ap-northeast-1.amazonaws.com/Covers/Hexo+|+Crafting+your+digital+home.jpg" class="responsive-img" alt="Hexo | Crafting your digital home">
+                        
+                        <span class="card-title">Hexo | Crafting your digital home</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            CHEN CHEN
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/GitHub-Pages/">
+                        <span class="chip bg-color">GitHub Pages</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023-2024</span>
+            
+           
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;chen chen All rights reserved. |&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+       
+      
+        </div>
+       
+    </div>
+
+<br>
+</footer>
+
+
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
