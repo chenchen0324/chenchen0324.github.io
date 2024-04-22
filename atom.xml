@@ -6,7 +6,7 @@
   <link href="https://chenchen0324.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenchen0324.github.io/"/>
-  <updated>2024-04-17T14:04:54.730Z</updated>
+  <updated>2024-04-22T15:10:37.955Z</updated>
   <id>https://chenchen0324.github.io/</id>
   
   <author>
@@ -17,11 +17,77 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LLM | Fine-tuning is All You Need</title>
+    <link href="https://chenchen0324.github.io/2023/12/13/llm-fine-tuning-is-all-you-need/"/>
+    <id>https://chenchen0324.github.io/2023/12/13/llm-fine-tuning-is-all-you-need/</id>
+    <published>2023-12-13T13:35:00.000Z</published>
+    <updated>2024-04-22T15:10:37.955Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract:&quot;&gt;&lt;/a&gt;Abstract:&lt;/h1&gt;&lt;p&gt;In this article, we explore the process of</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LLM" scheme="https://chenchen0324.github.io/tags/LLM/"/>
+    
+    <category term="Llama2" scheme="https://chenchen0324.github.io/tags/Llama2/"/>
+    
+    <category term="Colab" scheme="https://chenchen0324.github.io/tags/Colab/"/>
+    
+    <category term="HuggingFace" scheme="https://chenchen0324.github.io/tags/HuggingFace/"/>
+    
+    <category term="Fine-tuning" scheme="https://chenchen0324.github.io/tags/Fine-tuning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LLM | Embedding is All You Need</title>
+    <link href="https://chenchen0324.github.io/2023/12/11/llm-embedding-is-all-you-need/"/>
+    <id>https://chenchen0324.github.io/2023/12/11/llm-embedding-is-all-you-need/</id>
+    <published>2023-12-11T13:25:00.000Z</published>
+    <updated>2024-04-22T14:36:19.521Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract:&quot;&gt;&lt;/a&gt;Abstract:&lt;/h2&gt;&lt;p&gt;This article presents an exhaustive guide</summary>
+        
+      
+    
+    
+    
+    
+    <category term="LLM" scheme="https://chenchen0324.github.io/tags/LLM/"/>
+    
+    <category term="Embedding" scheme="https://chenchen0324.github.io/tags/Embedding/"/>
+    
+    <category term="Llama2" scheme="https://chenchen0324.github.io/tags/Llama2/"/>
+    
+    <category term="Colab" scheme="https://chenchen0324.github.io/tags/Colab/"/>
+    
+    <category term="Langchain" scheme="https://chenchen0324.github.io/tags/Langchain/"/>
+    
+    <category term="HuggingFace" scheme="https://chenchen0324.github.io/tags/HuggingFace/"/>
+    
+    <category term="RAG" scheme="https://chenchen0324.github.io/tags/RAG/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Django | Crash Course</title>
     <link href="https://chenchen0324.github.io/2023/11/10/django-crash-course/"/>
     <id>https://chenchen0324.github.io/2023/11/10/django-crash-course/</id>
     <published>2023-11-10T12:35:00.000Z</published>
-    <updated>2024-04-17T14:04:54.730Z</updated>
+    <updated>2024-04-17T15:53:08.005Z</updated>
     
     
       
